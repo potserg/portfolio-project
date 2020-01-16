@@ -1,10 +1,13 @@
 {
   "text-color": "#ffffff",
   "links-color": "#dddddf",
-  "icons-color": "#534d5d",
+  "icons-color": "#534d5c",
   "subtitle-color": "#a4aac6",
+  "purple-color": "#6d5ea9",
+  "grey-color": "#84808d",
   "bp-desktop-hd": "1800px",
   "bp-desktop": "1200px",
   "bp-tablets": "768px",
-  "bp-phones": "480px"
+  "bp-phones": "480px",
+  "my-name": "Сергей Потолицын"
 }
