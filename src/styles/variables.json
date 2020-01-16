@@ -5,6 +5,8 @@
   "subtitle-color": "#a4aac6",
   "purple-color": "#6d5ea9",
   "grey-color": "#84808d",
+  "bg-color": "#f8f8f8",
+  "polygon-color": "#100022",
   "bp-desktop-hd": "1800px",
   "bp-desktop": "1200px",
   "bp-tablets": "768px",

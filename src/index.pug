@@ -11,7 +11,7 @@ html(lang="ru")
     .wrapper
       .maincontent
         .fullscreen-section
-          .section.promo
+          section.promo
             header.container.header-container
               .header-logo
                 span.short-name СП
@@ -32,21 +32,63 @@ html(lang="ru")
                   +image('content/my-photo.jpg', 'foto-pic')
                 .profile__data
                   .profile__data_list
-                    .h3.data__item Проживаю:
-                    .h3.data__item Возраст:
-                    .h3.data__item Родился:
+                    h3.data__item Проживаю:
+                    h3.data__item Возраст:
+                    h3.data__item Родился:
                   .profile__data_value
-                    .h3.data__item Сыктывкар
-                    .h3.data__item 33 года
-                    .h3.data__item 27 мая 1986
+                    h3.data__item Сыктывкар
+                    h3.data__item 33 года
+                    h3.data__item 27 мая 1986
               .profile__right
                 .profile__title
-                  .h3.title__item Привет, меня зовут
-                  .h2.title__item--name Сергей Потолицын
-                  .h3.title__item Я занимаюсь разработкой современных сайтов и приложений.<br> Мне нравится делать то, что я делаю.
+                  h3.title__item Привет, меня зовут
+                  h2.title__item--name Сергей Потолицын
+                  h3.title__item Я занимаюсь разработкой современных сайтов и приложений.<br> Мне нравится делать то, что я делаю.
                 .profile__subtitle
-                  .h3.subtitle__item Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. По нему вы сможете понять, каким стеком технологий я овладел в процессе обучения.
-                
+                  +subtitle('subtitle__item')
+          section.skills
+            .skills__discription
+              .skills-bg.skills-bg--rocknroll
+                +image('content/rocknroll.png', 'rocknroll-pic')
+              .skills__discription_bg
+                svg.polygon-svg(viewBox="0 0 1800 150" xmlns="http://www.w3.org/2000/svg")
+                  polygon(points="0 0, 1800 0, 1800 20, 1400 150, 0 20")
+              .skills__discription_text
+                h2.skills__discription_title Чем я могу быть вам полезен
+                +subtitle('skills__discription_subtitle')
+            .container.skills-image__container
+              .skills-bg.skills-bg--guitar
+                +image('content/guitar.png', 'guitar-pic')
+              .skills-image__list
+                h2.skills-title Front-end
+                .skills-circle__list
+                  .skills-circle__item
+                    //- +circle
+                    h3.skills-circle__title HTML5
+                  .skills-circle__item
+                    //- +circle
+                    h3.skills-circle__title CSS3
+                  .skills-circle__item
+                    //- +circle
+                    h3.skills-circle__title Javascript
+                  .skills-circle__item
+                    //- +circle
+                    h3.skills-circle__title jQuery
+              .skills-image__list
+                h2.skills-title Workflow
+                .skills-circle__list
+                  .skills-circle__item
+                    //- +circle
+                    h3.skills-circle__title Git
+                  .skills-circle__item
+                    //- +circle
+                    h3.skills-circle__title Terminal
+                  .skills-circle__item
+                    //- +circle
+                    h3.skills-circle__title Gulp
+                  .skills-circle__item
+                    //- +circle
+                    h3.skills-circle__title Webpack
 
 
           //- +image('content/user.jpg', 'user-pic')

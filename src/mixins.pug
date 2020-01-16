@@ -19,3 +19,11 @@ mixin socials
       li.socials__item
         a(class=`socials__link socials__link_${social}` href="#")
           +icon(`${social}`, 'socials__icon')
+
+mixin subtitle(className)
+  h3(class=className) Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. По нему вы сможете понять, каким стеком технологий я овладел в процессе обучения!
+
+mixin circle
+  svg.skills-circle__icon(viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg")
+    circle(cx="75" cy="75" r="70")
+
