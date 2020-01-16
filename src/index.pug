@@ -1,15 +1,32 @@
 include ./mixins.pug
 
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Portfolio | main page
+    title Portfolio | Rockstar
   body
     .wrapper
       .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+        .fullscreen-section
+          .section.promo
+            header.container.header-container
+              .header-logo
+                span.short-name СП
+              +nav('header-nav', ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"])
+              .header-socials
+                +socials
+            .container.promo-container
+              .promo-content
+                h2.subtittle.promo-subtitle Личный сайт <br> веб-разработчика
+                h1.title.promo-title Сергей <br> Потолицын
+              .promo-scroll
+                .scroll__text Скролл
+                button.scroll__btn(type="button")
+                  +icon('scroll', 'scrool__btn_icon')
+
+          //- +image('content/user.jpg', 'user-pic')
+          //- +icon('link', 'link-class')
+          //- .icon-bg
