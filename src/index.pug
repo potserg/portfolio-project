@@ -89,6 +89,38 @@ html(lang="ru")
                   .skills-circle__item
                     //- +circle
                     h3.skills-circle__title Webpack
+          section.works
+            .container.works__container
+              h2.works-text Мои работы
+              .works__content
+                .works__img
+                  +image('content/mainwork.png', 'mainwork-pic')
+                  .works__img_list
+                    .works__img_item
+                      +image('content/miniwork_1.png', 'miniwork-pic')
+                    .works__img_item
+                      +image('content/miniwork_2.png', 'miniwork-pic')
+                    .works__img_item
+                      +image('content/miniwork_3.png', 'miniwork-pic')
+                    .works__img_item
+                      +image('content/miniwork_4.png', 'miniwork-pic')
+                    .works__scroll
+                      +icon('arrow-down', 'arrow-icon arrow-icon--right')
+                      +icon('arrow-down', 'arrow-icon arrow-icon--left')
+                .works__number
+                  +image('content/2.png', 'number-pic')
+                .works__discription
+                  .works__tool_list
+                    .works__tool_item HTML
+                    .works__tool_item CSS
+                    .works__tool_item Javascript
+                  h2.works__title Сайт школы образования
+                  h3.works__subtitle Этот парень проходил обучение веб-разработке не где-то, а в Loftschool. А это что-то да значит!
+                  .works__link
+                    .works__link-icon
+                      +icon('link', 'link-icon')
+                    .works__link-text
+                      a.link-text(href="#") Посмотреть сайт
 
 
           //- +image('content/user.jpg', 'user-pic')
