@@ -1,0 +1,129 @@
+.reviews__container {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: relative;
+  /* &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(~images/content/bg-about.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+  } */
+}
+
+.reviews__title {
+  display: flex;
+  margin-bottom: 100px;
+  &_text {
+    font-size: 36px;
+    font-weight: 700;
+    margin-right: 130px;
+  }
+}
+
+.reviews__scroll_list {
+  display: flex;
+}
+
+.reviews__scroll {
+  width: 50px;
+  height: 50px;
+  border: 2px solid $text-color;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-right: 25px;
+  &_btn {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.reviews-icon {
+  width: 12px;
+  height: 12px;
+  fill: $text-color;
+  &--left {
+    transform: rotate(180deg);
+  }
+}
+
+.reviews__text_list {
+  display: flex;
+  max-width: 1000px;
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.reviews__text_item {
+  display: flex;
+  width: 50%;
+  margin-right: 80px;
+}
+
+.reviews-img {
+  margin-right: 25px;
+}
+
+.quote-icon {
+  width: 100px;
+  height: 80px;
+  fill: $quote-color;
+}
+
+.reviews__disc {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.reviews__disc_text {
+  font-size: 16px;
+  font-weight: 600;
+  color: $grey-color;
+  margin-bottom: 20px;
+  height: 50%;
+}
+
+.reviews__disc_author {
+  display: flex;
+  align-items: center;
+  height: 50%;
+}
+
+.author-foto {
+  margin-right: 30px;
+}
+
+.reviews-pic {
+  width: 80px;
+}
+
+.author-disc {
+  display: flex;
+  flex-direction: column;
+
+  &--name {
+    font-size: 18px;
+    font-weight: 700;
+    color: $text-color;
+    margin-bottom: 20px;
+  }
+
+  &--range {
+    font-size: 16px;
+    font-weight: 400;
+    color: $grey-color;
+  }
+}

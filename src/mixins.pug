@@ -13,13 +13,6 @@ mixin nav(className, items, activeItem)
         li(class=`${className}__item`)
           a(class=`${className}__link` href="#")= item
 
-mixin socials
-  ul.socials__list
-    each social in ['insta', 'vk', 'github']
-      li.socials__item
-        a(class=`socials__link socials__link_${social}` href="#")
-          +icon(`${social}`, 'socials__icon')
-
 mixin subtitle(className)
   h3(class=className) Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. По нему вы сможете понять, каким стеком технологий я овладел в процессе обучения!
 

@@ -1,6 +1,5 @@
-.header-container {
+.header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: absolute;
   top: 0;
@@ -9,41 +8,17 @@
   z-index: 10;
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .header-logo {
   font-size: 36px;
   font-weight: 800;
 }
 
-.header-nav__list {
-  display: flex;
-  justify-content: center;
-}
-
-.header-nav__item {
-  margin-left: 50px;
-  &:first-child {
-    margin-left: 0;
-  }
-}
-
-.header-nav__link {
-  color: $links-color;
-}
-
-.socials__list {
-  display: flex;
-  justify-content: center;
-}
-
-.socials__item {
-  width: 30px;
-  height: 30px;
-  margin-left: 50px;
-  &:first-child {
-    margin-left: 0;
-  }
-}
-
-.socials__icon {
-  fill: $icons-color;
+.header-nav {
+  margin: 0 90px;
 }
