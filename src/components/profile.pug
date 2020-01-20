@@ -1,0 +1,21 @@
+.container.profile-container
+  .profile__left
+    .profile__user
+      .profile__foto
+        +image('content/my-photo.jpg', 'foto-pic')
+    .profile__data
+      .profile__data_list
+        h3.data__item Проживаю:
+        h3.data__item Возраст:
+        h3.data__item Родился:
+      .profile__data_value
+        h3.data__item Сыктывкар
+        h3.data__item 33 года
+        h3.data__item 27 мая 1986
+  .profile__right
+    .profile__title
+      h3.title__item Привет, меня зовут
+      h2.title__item--name Сергей Потолицын
+      h3.title__item Я занимаюсь разработкой современных сайтов и приложений.<br> Мне нравится делать то, что я делаю.
+    .profile__subtitle
+      +subtitle('subtitle__item')

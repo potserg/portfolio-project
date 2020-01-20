@@ -1,5 +1,8 @@
 include ./mixins.pug
-include ./socials.pug
+include ./components/socials.pug
+include ./components/circle.pug
+include ./components/subtitle.pug
+include ./components/menu.pug
 
 <!DOCTYPE html>
 html(lang="ru")
@@ -12,201 +15,16 @@ html(lang="ru")
     .wrapper
       .main-content
         section.header
-          header.container.header-container
-              .header-logo
-                .short-name СП
-              .header-nav
-                +nav('menu', ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"])
-              +socials('header')
+          include ./components/header.pug
         section.promo
-          .container.promo-container
-            .promo-content
-              h2.subtittle.promo-subtitle Личный сайт <br> веб-разработчика
-              h1.title.promo-title Сергей <br> Потолицын
-            .promo-scroll
-              .scroll__text Скролл
-              button.scroll__btn(type="button")
-                +icon('scroll', 'scrool__btn_icon')
-          .container.profile-container
-            .profile__left
-              .profile__user
-                .profile__foto
-                  +image('content/my-photo.jpg', 'foto-pic')
-              .profile__data
-                .profile__data_list
-                  h3.data__item Проживаю:
-                  h3.data__item Возраст:
-                  h3.data__item Родился:
-                .profile__data_value
-                  h3.data__item Сыктывкар
-                  h3.data__item 33 года
-                  h3.data__item 27 мая 1986
-            .profile__right
-              .profile__title
-                h3.title__item Привет, меня зовут
-                h2.title__item--name Сергей Потолицын
-                h3.title__item Я занимаюсь разработкой современных сайтов и приложений.<br> Мне нравится делать то, что я делаю.
-              .profile__subtitle
-                +subtitle('subtitle__item')
+          include ./components/promo.pug
+          include ./components/profile.pug
         section.skills
-          .skills__discription
-            .skills-bg.skills-bg--rocknroll
-              +image('content/rocknroll.png', 'rocknroll-pic')
-            .skills__discription_bg
-              svg.polygon-svg(viewBox="0 0 1800 150" xmlns="http://www.w3.org/2000/svg")
-                polygon(points="0 0, 1800 0, 1800 20, 1400 150, 0 20")
-            .skills__discription_text
-              h2.skills__discription_title Чем я могу быть вам полезен
-              +subtitle('skills__discription_subtitle')
-          .container.skills-image__container
-            .skills-bg.skills-bg--guitar
-              +image('content/guitar.png', 'guitar-pic')
-            .skills-image__list
-              h2.skills-title Front-end
-              .skills-circle__list
-                .skills-circle__item
-                  +circle('html')
-                  h3.skills-circle__title HTML5
-                .skills-circle__item
-                  +circle('css')
-                  h3.skills-circle__title CSS3
-                .skills-circle__item
-                  +circle('js')
-                  h3.skills-circle__title Javascript
-                .skills-circle__item
-                  +circle('jq')
-                  h3.skills-circle__title jQuery
-            .skills-image__list
-              h2.skills-title Workflow
-              .skills-circle__list
-                .skills-circle__item
-                  +circle('git')
-                  h3.skills-circle__title Git
-                .skills-circle__item
-                  +circle('term')
-                  h3.skills-circle__title Terminal
-                .skills-circle__item
-                  +circle('gulp')
-                  h3.skills-circle__title Gulp
-                .skills-circle__item
-                  +circle('wp')
-                  h3.skills-circle__title Webpack
+          include ./components/skills.pug
         section.works
-          .container.works__container
-            h2.works-text Мои работы
-            .works__content
-              .works__img
-                +image('content/mainwork.png', 'mainwork-pic')
-                .works__img_list
-                  .works__img_item
-                    +image('content/miniwork_1.png', 'miniwork-pic')
-                  .works__img_item
-                    +image('content/miniwork_2.png', 'miniwork-pic')
-                  .works__img_item
-                    +image('content/miniwork_3.png', 'miniwork-pic')
-                  .works__img_item
-                    +image('content/miniwork_4.png', 'miniwork-pic')
-                  .works__scroll
-                    button.works__scroll_btn
-                      +icon('arrow-down', 'arrow-icon arrow-icon--right')
-                    button.works__scroll_btn
-                      +icon('arrow-down', 'arrow-icon arrow-icon--left')
-              .works__number
-                +image('content/2.png', 'number-pic')
-              .works__discription
-                .works__tool_list
-                  .works__tool_item HTML
-                  .works__tool_item CSS
-                  .works__tool_item Javascript
-                h2.works__title Сайт школы образования
-                h3.works__subtitle Этот парень проходил обучение веб-разработке не где-то, а в Loftschool. А это что-то да значит!
-                .works__link
-                  .works__link-icon
-                    +icon('link', 'link-icon')
-                  .works__link-text
-                    a.link-text(href="#") Посмотреть сайт
+          include ./components/works.pug
         section.about
-          .container.reviews__container
-            .reviews__title 
-              h2.reviews__title_text Что обо мне говорят
-              .reviews__scroll_list
-                .reviews__scroll.reviews__scroll
-                  button.reviews__scroll_btn
-                    +icon('arrow-down', 'reviews-icon reviews-icon--left')
-                .reviews__scroll.reviews__scroll
-                  button.reviews__scroll_btn
-                    +icon('arrow-down', 'reviews-icon reviews-icon--right')
-            .reviews__text_list
-              .reviews__text_item
-                .reviews-img
-                  +icon('quote', 'quote-icon')
-                .reviews__disc
-                  .reviews__disc_text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool. А это что-то да значит!
-                  .reviews__disc_author
-                    .author-foto
-                      +image('content/reviews_1.png', 'reviews-pic')
-                    .author-disc
-                      .author-disc--name Ковальчук Дмитрий
-                      .author-disc--range Основатель школы LoftSchool
-              .reviews__text_item
-                .reviews-img
-                  +icon('quote', 'quote-icon')
-                .reviews__disc
-                  .reviews__disc_text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых бабушках!
-                  .reviews__disc_author
-                    .author-foto
-                      +image('content/reviews_2.png', 'reviews-pic')
-                    .author-disc
-                      .author-disc--name Владимир Сабанцев
-                      .author-disc--range Преподователь школы LoftSchool
-          .container.order__container
-            .order__title
-              h2.order__title_text Связаться со мной
-            .order__content
-              form.order-form
-                .order-form__row
-                  label.order-form__block
-                    .order-form__title Введите ваше имя
-                    .order-form__value
-                      .order-form__img
-                        +icon('user', 'order-icon')
-                      input.order-form__input(type='text' name='name' value='Захар Прохоров')
-                  label.order-form__block
-                    .order-form__title Введите ваш e-mail
-                    .order-form__value
-                      .order-form__img
-                        +icon('envelope', 'order-icon')
-                      input.order-form__input(type='email' name='to' value='email@mail.com')
-                .order-form__row
-                  label.order-form__block
-                    .order-form__title Сообщение к письму
-                    .order-form__value
-                      .order-form__img
-                        +icon('message', 'order-icon')
-                      textarea.order-form__input.order-form__input--textarea(name='comment' placeholder='Интересует красивый и функциональный лендинг. Какова цена вопроса?')
-                .order-form__row
-                  label.order-form__btn
-                    input.order-form__btn(type='submit' value='Отправить')#send-order
+          include ./components/reviews.pug
+          include ./components/order.pug
         section.footer
-          footer.container.footer__container
-            .footer__copyright
-              .copyright__block &copy 2020
-            .footer__content
-              .footer__row
-                .footer__title
-                  h2.footer__title_text Сергей Потолицын
-                .footer__nav
-                  +nav('menu', ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"])
-              .footer__row
-                .footer__subtitle
-                  h3.footer__subtitle_text Личный сайт вебразработчика
-                .footer__socials
-                  +subtitle('footer__socials_text')
-                  +socials('footer')
-                .footer__article
-                  .footer__article_text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете
-                  .footer__article_author Martin Colding
-                  
-          //- +image('content/user.jpg', 'user-pic')
-          //- +icon('link', 'link-class')
-          //- .icon-bg
+          include ./components/footer.pug

@@ -5,19 +5,3 @@ mixin icon(name, className)
 
 mixin image(path, className)
   img(src=require(`images/${path}`) class=className)
-
-mixin nav(className, items, activeItem)
-  nav(class=`${className}`)
-    ul(class=`${className}__list`)
-      each item, ndx in items
-        li(class=`${className}__item`)
-          a(class=`${className}__link` href="#")= item
-
-mixin subtitle(className)
-  h3(class=className) Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. По нему вы сможете понять, каким стеком технологий я овладел в процессе обучения!
-
-mixin circle(mod)
-  svg.skills-circle__icon(viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg")
-    circle.skills-circle__icon--grey(cx="75" cy="75" r="65")
-    circle(class='skills-circle__icon--blue skills-circle__icon--' + mod cx="75" cy="75" r="65")
-

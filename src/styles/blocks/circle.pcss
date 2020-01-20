@@ -1,0 +1,72 @@
+.skills-circle__list {
+  display: flex;
+}
+
+.skills-circle__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-left: 50px;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.skills-circle__icon {
+  width: 160px;
+  height: 160px;
+  fill: none;
+  
+  &--grey {
+    stroke: rgba($grey-color, .3);
+    stroke-width: 10;
+  }
+
+  &--blue {
+    stroke: $btn-color;
+    stroke-width: 20;
+  }
+
+  &--html {
+    stroke-dasharray: 306.15 102.05;
+    stroke-dashoffset: 204.10;
+  }
+  &--css {
+    stroke-dasharray: 204.1;
+    stroke-dashoffset: 204.10;
+  }
+  &--js {
+    stroke-dasharray: 102.05 306.15;
+    stroke-dashoffset: 204.10;
+  }
+  &--jq {
+    stroke-dasharray: 51.025 357.175;
+    stroke-dashoffset: 204.10;
+  }
+  &--git {
+    stroke-dasharray: 204.1;
+    stroke-dashoffset: 204.10;
+  }
+  &--term {
+    stroke-dasharray: 204.1;
+    stroke-dashoffset: 204.10;
+  }
+  &--gulp {
+    stroke-dasharray: 102.05 306.15;
+    stroke-dashoffset: 204.10;
+  }
+  &--wp {
+    stroke-dasharray: 51.025 357.175;
+    stroke-dashoffset: 204.10;
+  }
+  
+}
+
+.skills-circle__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: $grey-color;
+  position: absolute;
+  top: 65px;
+}
