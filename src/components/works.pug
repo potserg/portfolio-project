@@ -1,0 +1,34 @@
+h3.works__title Мои работы
+.works__content
+  .works__img
+    +image('content/mainwork.png', 'works__img_main', 'Изображение главной страницы выбранного проекта из списка')
+    ul.works__list
+      li.works__item
+        button.works__btn
+          +image('content/miniwork_1.png', 'works__pic', 'Миниатюра главной страницы одного из моих проектов')
+      li.works__item
+        button.works__btn
+          +image('content/miniwork_2.png', 'works__pic', 'Миниатюра главной страницы одного из моих проектов')
+      li.works__item
+        button.works__btn
+          +image('content/miniwork_3.png', 'works__pic', 'Миниатюра главной страницы одного из моих проектов')
+      li.works__item
+        button.works__btn
+          +image('content/miniwork_4.png', 'works__pic', 'Миниатюра главной страницы одного из моих проектов')
+      li.works__scroll
+        button.works__scroll_btn
+          +icon('arrow-down', 'works__scroll_icon works__scroll_icon--next')
+        button.works__scroll_btn
+          +icon('arrow-down', 'works__scroll_icon works__scroll_icon--prev')
+  .works__number 2
+  .works__desc
+    ul.works__tags_list
+      li.works__tags_item HTML
+      li.works__tags_item CSS
+      li.works__tags_item Javascript
+    h4.works__title Сайт школы образования
+    p.works__subtitle Этот парень проходил обучение веб-разработке не где-то, а в Loftschool. А это что-то да значит!
+    a.works__link(href="#")
+      .works__link_img
+        +icon('link', 'works__link_icon')
+      .works__link_text Посмотреть сайт

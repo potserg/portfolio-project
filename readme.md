@@ -1,12 +1,18 @@
-# Учебный шаблон проекта Portfolio
+## Имя студента
 
-> Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/), а так же 
-[последняя версия Yarn](https://yarnpkg.com/ru/docs/install)
+Сергей Потолицын
+
+## Дата начала курса
+01/13/2020
+
+## Наставник курса
+
+Ольга Болотова
 
 ##  Чтобы развернуть проект необходимо:
 ```sh
-$ git clone git@github.com:loftschool/ls-advanced-portfolio.git
-$ cd ls-advanced-portfolio
+$ git clone git@github.com:potserg/portfolio-project.git
+$ cd portfolio-project
 $ yarn
 ```
 

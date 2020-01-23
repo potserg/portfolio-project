@@ -1,0 +1,114 @@
+.reviews {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.reviews__slider {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.reviews__title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-right: 130px;
+}
+
+.reviews__scroll {
+  display: flex;
+}
+
+.reviews__scroll_btn {
+  width: 50px;
+  height: 50px;
+  border: 2px solid $text-color;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-right: 25px;
+}
+
+.reviews__scroll_icon {
+  width: 12px;
+  height: 12px;
+  fill: $text-color;
+  &--next {
+    transform: rotate(180deg);
+  }
+}
+
+.reviews__list {
+  display: flex;
+  max-width: 1000px;
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.reviews__item {
+  display: flex;
+  width: 50%;
+  margin-right: 80px;
+}
+
+.reviews__img {
+  margin-right: 25px;
+}
+
+.reviews__icon {
+  width: 100px;
+  height: 80px;
+  fill: $quote-color;
+}
+
+.reviews__desc {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.reviews__desc_text {
+  font-size: 16px;
+  font-weight: 600;
+  color: $grey-color;
+  margin-bottom: 20px;
+  height: 50%;
+}
+
+.reviews__desc_author {
+  display: flex;
+  align-items: center;
+  height: 50%;
+}
+
+.reviews__desc_author-foto {
+  margin-right: 30px;
+}
+
+.reviews__desc_author-pic {
+  width: 80px;
+}
+
+.reviews__desc_author-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews__desc_author {
+  
+  &--name {
+    font-size: 18px;
+    font-weight: 700;
+    color: $text-color;
+    margin-bottom: 20px;
+  }
+
+  &--range {
+    font-size: 16px;
+    font-weight: 400;
+    color: $grey-color;
+  }
+}
