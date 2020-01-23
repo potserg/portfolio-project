@@ -1,7 +1,7 @@
 include ./mixins.pug
 include ./components/socials.pug
 include ./components/circle.pug
-include ./components/subtitle.pug
+include ./components/subtext.pug
 include ./components/menu.pug
 
 <!DOCTYPE html>
@@ -13,18 +13,23 @@ html(lang="ru")
     title Portfolio | Rockstar
   body
     .wrapper
-      .main-content
-        section.header
+      header.header
+        .container.header__container
           include ./components/header.pug
-        section.promo
+      .promo-wrapper
+        .container.promo__container
           include ./components/promo.pug
           include ./components/profile.pug
-        section.skills
+      section.skills
+        .container.skills__container
           include ./components/skills.pug
-        section.works
+      section.works
+        .container.works__container
           include ./components/works.pug
-        section.about
+      .feedback-wrapper
+        .container.feedback__container
           include ./components/reviews.pug
           include ./components/order.pug
-        section.footer
+      footer.footer
+        .container.footer__container
           include ./components/footer.pug

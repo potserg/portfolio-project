@@ -1,8 +1,8 @@
-.container.promo-container
-  .promo-content
-    h1.subtittle.promo-subtitle Личный сайт вебразработчика
-    h1.title.promo-title Сергей Потолицын
-  .promo-scroll
-    .scroll__text Скролл
-    button.scroll__btn(type="button")
-      +icon('scroll', 'scrool__btn_icon')
+section.promo
+  .promo__content
+    h1.title.promo__title Сергей Потолицын
+      span.subtittle.promo__subtitle Личный сайт вебразработчика
+  .promo__scroll
+    a.promo__scroll_btn(href='#profile') 
+      .promo__scroll_btn--text Скролл
+      +icon('scroll', 'promo__scroll_btn--icon')

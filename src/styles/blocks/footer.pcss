@@ -3,7 +3,7 @@
   height: 410px;
   background-color: $about-color;
   position: relative;
-  padding-top: 100px;
+  padding: 90px 0 25px 0;
 }
 
 .footer__container {
@@ -18,7 +18,7 @@
   margin-right: 60px;
 }
 
-.copyright__block {
+.footer__copyright_block {
   font-size: 48px;
   font-weight: 600;
   color: $copyright-color;
@@ -35,6 +35,9 @@
 .footer__row {
   display: flex;
   margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .footer__title {
@@ -44,6 +47,15 @@
   text-transform: uppercase;
   color: $text-color;
   margin-right: 130px;
+}
+
+.footer__subtitle {
+  width: 150px;
+  font-size: 16px;
+  font-weight: 400;
+  color: $copyright-color;
+  margin-right: 130px;
+  position: relative;
 }
 
 .footer__socials {
@@ -67,12 +79,9 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 1.7;
+  margin: 0;
   &_text {
     color: $grey-color;
     margin-bottom: 30px;
-  }
-  &_author {
-    color: $text-color;
-    font-style: italic;
   }
 }

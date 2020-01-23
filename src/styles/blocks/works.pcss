@@ -9,10 +9,11 @@
 .works__container {
   display: flex;
   flex-direction: column;
+  height: 100%;
   position: relative;
 }
 
-.works-text {
+.works__title {
   display: flex;
   align-items: center;
   height: 280px;
@@ -28,32 +29,29 @@
 
 .works__img {
   width: 65%;
-  height: 550px;
-  margin-right: -50px;
-  z-index: 5;
+  height: 100%;
   position: relative;
+  z-index: 5;
 }
 
-.works__img_list {
+.works__img_main {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.works__list {
   display: flex;
   position: absolute;
   right: -50px;
   bottom: 10%;
 }
 
-.works__img_item {
+.works__btn {
   &:hover {
     cursor: pointer;
     border: 3px solid $worksborder-color;
   }
-}
-
-.works__number {
-  display: flex;
-  flex-direction: column;
-  width: 15%;
-  height: 50%;
-  padding-top: 100px;
 }
 
 .works__scroll {
@@ -66,28 +64,48 @@
   background-color: $worksscroll-color;
 }
 
-.arrow-icon {
+.works__scroll_icon {
   width: 10px;
   height: 10px;
-  fill: $text-color;
-  &--left {
+  fill: $grey-color;
+  &--prev {
     transform: rotate(180deg);
-    fill: $grey-color;
+  }
+  &:hover {
+    fill: $text-color;
   }
 }
 
-.works__discription {
+.works__desc {
+  display: flex;
+  width: 35%;
+  height: 70%;
+  position: relative;
+
+}
+
+.works__number {
+  width: 15%;
+  height: 70%;
+  font-size: 400px;
+  font-weight: 800;
+  color: rgba($grey-color, .3);
+  left: -50px;
+}
+
+.works__desc {
   width: 20%;
+  height: 70%;
   display: flex;
   flex-direction: column;
 }
 
-.works__tool_list {
+.works__tags_list {
   display: flex;
   margin-bottom: 50px;
 }
 
-.works__tool_item {
+.works__tags_item {
   font-size: 15px;
   font-weight: 600;
   color: $grey-color;
@@ -118,17 +136,18 @@
 
 .works__link {
   display: flex;
+  align-items: center;
+  color: $workslink-color;
 }
 
-.works__link-icon {
+.works__link_img {
   fill: $workslink-color;
   width: 20px;
   height: 20px;
   margin-right: 20px;
 }
 
-.works__link-text {
+.works__link_text {
   font-size: 18px;
   font-weight: 700;
-  color: $workslink-color;
 }

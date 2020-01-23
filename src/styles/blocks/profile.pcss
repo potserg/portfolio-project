@@ -1,17 +1,13 @@
-.profile-container {
+.profile {
   display: flex;
+  justify-content: space-between;
 }
 
-.profile__left {
+.profile__main {
   width: 40%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-right: 155px;
-}
-
-.profile__user {
-  margin-bottom: 75px;
 }
 
 .profile__foto {
@@ -19,59 +15,55 @@
   height: 205px;
   overflow: hidden;
   border-radius: 50%;
- 
+  margin-bottom: 75px;
 }
 
-.foto-pic {
+.profile__foto-pic {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .profile__data {
-  height: 50%;
-  display: flex;
+  font-size: 16px;
   font-weight: 600;
-  &_list {
-    margin-right: 75px;
+}
+
+.profile__data_cell {
+  padding-bottom: 20px;
+
+  &:first-child {
     color: $purple-color;
+    padding-right: 75px;
   }
+
 }
 
-.data__item {
-  margin-bottom: 20px;
-}
-
-.profile__right {
-  width: 60%;
+.profile__desc {
+  width: 40%;
   display: flex;
   flex-direction: column;
-}
-
-.profile__title {
-  height: 50%;
-  margin-bottom: 75px;
-}
-
-.profile__subtitle {
-  height: 50%;
-}
-
-.title__item {
-  margin-bottom: 30px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.7;
   color: $grey-color;
-  &--name {
-    margin-bottom: 40px;
-    font-size: 36px;
-    font-weight: 700;
-    color: $text-color;
-  }
 }
 
-.subtitle__item {
-  font-style: italic;
+.profile__desc_welcome-text {
+  margin-bottom: 30px;
+}
+
+.profile__desc_username {
+  font-size: 36px;
+  font-weight: 700;
   line-height: 1.7;
-  color: $grey-color;
+  color: $text-color;
+  margin-bottom: 40px;
+}
+.profile__desc_text {
+  margin-bottom: 100px;
+}
+
+.profile__desc_subtext {
+  font-style: italic;
 }

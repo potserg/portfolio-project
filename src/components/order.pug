@@ -1,6 +1,5 @@
-.container.order__container
-  .order__title
-    h2.order__title_text Связаться со мной
+section.order
+  h3.order__title Связаться со мной
   .order__content
     form.order-form
       .order-form__row
@@ -9,13 +8,13 @@
           .order-form__value
             .order-form__img
               +icon('user', 'order-icon')
-            input.order-form__input(type='text' name='name' value='Захар Прохоров')
+            input.order-form__input(type='text' name='name' placeholder='Захар Прохоров')
         label.order-form__block
           .order-form__title Введите ваш e-mail
           .order-form__value
             .order-form__img
               +icon('envelope', 'order-icon')
-            input.order-form__input(type='email' name='to' value='email@mail.com')
+            input.order-form__input(type='email' name='to' placeholder='email@mail.com')
       .order-form__row
         label.order-form__block
           .order-form__title Сообщение к письму
