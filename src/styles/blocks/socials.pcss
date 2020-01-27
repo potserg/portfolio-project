@@ -2,6 +2,10 @@
   .socials__item {
     border: 2px solid $icons-color;
     border-radius: 50%;
+    /* &:hover {
+      border-color: $text-color;
+      transition: 1s
+    } */
   }
 }
 
@@ -20,11 +24,21 @@
   &:first-child {
     margin-left: 0;
   }
+  &:hover {
+    border-color: $text-color;
+    transition: 1s
+  }
 }
 
 .socials__link {
   width: 30px;
   height: 30px;
+  &:hover {
+    .socials__icon {
+      fill: $text-color;
+      transition: 1s;
+    }
+  }
 }
 
 .socials__icon {

@@ -17,20 +17,21 @@ html(lang="ru")
         .container.header__container
           include ./components/header.pug
       .promo-wrapper
-        include ./components/parallax.pug
+        include ./components/parallax-fest.pug
         .container.promo__container
           include ./components/promo.pug
           include ./components/profile.pug
-      section.skills
+      section.skills#skills
         .container.skills__container
           include ./components/skills.pug
-      section.works
+      section.works#works
         .container.works__container
           include ./components/works.pug
       .feedback-wrapper
         .container.feedback__container
           include ./components/reviews.pug
           include ./components/order.pug
+        include ./components/parallax-music.pug
       footer.footer
         .container.footer__container
           include ./components/footer.pug

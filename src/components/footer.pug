@@ -4,7 +4,32 @@
   .footer__row
     h4.footer__title Сергей Потолицын
     .footer__menu
-      +nav('menu', ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"])
+      +nav('menu', [
+        {
+          name: "Главная",
+          anchor: "promo"
+        },
+        {
+          name: "Обо мне",
+          anchor: "profile"
+        },
+        {
+          name: "Навыки",
+          anchor: "skills"
+        },
+        {
+          name: "Работы",
+          anchor: "works"
+        },
+        {
+          name: "Отзывы",
+          anchor: "reviews"
+        },
+        {
+          name: "Связаться",
+          anchor: "order"
+        }
+      ])
   .footer__row
     .footer__subtitle
       p.footer__subtitle_text Личный сайт вебразработчика

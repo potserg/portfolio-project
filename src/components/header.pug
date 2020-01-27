@@ -1,5 +1,30 @@
 .header__logo
   .short__name СП
 .header__menu
-  +nav('menu', ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"])
+  +nav('menu', [
+    {
+      name: "Главная",
+      anchor: "promo"
+    },
+    {
+      name: "Обо мне",
+      anchor: "profile"
+    },
+    {
+      name: "Навыки",
+      anchor: "skills"
+    },
+    {
+      name: "Работы",
+      anchor: "works"
+    },
+    {
+      name: "Отзывы",
+      anchor: "reviews"
+    },
+    {
+      name: "Связаться",
+      anchor: "order"
+    }
+  ])
 +socials('header')
