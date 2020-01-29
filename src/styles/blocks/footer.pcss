@@ -4,6 +4,10 @@
   background-color: $about-color;
   position: relative;
   padding: 90px 0 25px 0;
+  @include tablets {
+    height: 480px;
+    padding: 45px 0 25px 0;
+  }
 }
 
 .footer__container {
@@ -13,49 +17,73 @@
   position: relative;
 }
 
-.footer__copyright {
-  width: 30%;
-  margin-right: 60px;
-}
-
-.footer__copyright_block {
-  font-size: 48px;
-  font-weight: 600;
-  color: $copyright-color;
-}
-
-.footer__content {
+.footer__author {
+  width: 35%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-}
-
-.footer__row {
-  display: flex;
-  margin-bottom: 30px;
-  &:last-child {
-    margin-bottom: 0;
+  justify-content: space-between;
+  @include tablets {
+    flex-direction: column;
+    justify-content: flex-start;
   }
 }
 
-.footer__title {
+.footer__copyright {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1;
+  color: $copyright-color;
+  margin-right: 60px;
+  @include tablets {
+    margin-bottom: 30px;
+  }
+}
+
+.footer__author_name {
+  display: flex;
+  flex-direction: column;
+  margin-right: 60px;
+}
+
+.footer__author_title {
   width: 150px;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   color: $text-color;
-  margin-right: 130px;
+  margin-bottom: 30px;
 }
 
-.footer__subtitle {
+.footer__author_subtitle {
   width: 150px;
   font-size: 16px;
   font-weight: 400;
   color: $copyright-color;
-  margin-right: 130px;
   position: relative;
+}
+
+.footer__content {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+
+.footer__menu {
+  margin-bottom: 50px;
+}
+
+.footer__contacts {
+  width: 100%;
+  display: flex;
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .footer__socials {
@@ -69,6 +97,13 @@
     line-height: 1.7;
     color: $grey-color;
     margin-bottom: 30px;
+    @include tablets {
+      margin-bottom: 15px;
+    }
+  }
+  @include tablets {
+    margin-right: 0;
+    margin-bottom: 50px;
   }
 }
 

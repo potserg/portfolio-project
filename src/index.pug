@@ -28,10 +28,11 @@ html(lang="ru")
         .container.works__container
           include ./components/works.pug
       .feedback-wrapper
-        .container.feedback__container
-          include ./components/reviews.pug
-          include ./components/order.pug
         include ./components/parallax-music.pug
+        .feedback__section
+          .container.feedback__container
+            include ./components/reviews.pug
+            include ./components/order.pug
       footer.footer
         .container.footer__container
           include ./components/footer.pug

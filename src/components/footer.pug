@@ -1,38 +1,37 @@
-.footer__copyright
-  .footer__copyright_block &copy 2020
+.footer__author
+  .footer__copyright &copy 2020
+  .footer__author_name
+    h4.footer__author_title Сергей Потолицын
+    .footer__author_subtitle Личный сайт вебразработчика
 .footer__content
-  .footer__row
-    h4.footer__title Сергей Потолицын
-    .footer__menu
-      +nav('menu', [
-        {
-          name: "Главная",
-          anchor: "promo"
-        },
-        {
-          name: "Обо мне",
-          anchor: "profile"
-        },
-        {
-          name: "Навыки",
-          anchor: "skills"
-        },
-        {
-          name: "Работы",
-          anchor: "works"
-        },
-        {
-          name: "Отзывы",
-          anchor: "reviews"
-        },
-        {
-          name: "Связаться",
-          anchor: "order"
-        }
-      ])
-  .footer__row
-    .footer__subtitle
-      p.footer__subtitle_text Личный сайт вебразработчика
+  .footer__menu
+    +nav('menu', [
+      {
+        name: "Главная",
+        anchor: "promo"
+      },
+      {
+        name: "Обо мне",
+        anchor: "profile"
+      },
+      {
+        name: "Навыки",
+        anchor: "skills"
+      },
+      {
+        name: "Работы",
+        anchor: "works"
+      },
+      {
+        name: "Отзывы",
+        anchor: "reviews"
+      },
+      {
+        name: "Связаться",
+        anchor: "order"
+      }
+    ])
+  .footer__contacts
     .footer__socials
       +subtext('footer__socials_text')
       +socials('footer')

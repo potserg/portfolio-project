@@ -6,36 +6,9 @@
   justify-content: center;
   align-items: flex-start;
   position: relative;
-
-  /* &:before {
-    content: "";
-    display: block;
-    width: 1200px;
-    height: 900px;
-    background-image: url(~images/content/drums.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: .8;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    z-index: 90;
+  @include tablets {
+    align-items: center;
   }
-
-  &:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1000px;
-    background-image: url(~images/content/smoke.png);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -375px;
-    left: 10%;
-    z-index: -40;
-  } */
 }
 
 .order__title {
@@ -47,6 +20,9 @@
 .order__content {
   width: 60%;
   position: relative;
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .order-form {
@@ -63,6 +39,11 @@
   width: 100%;
   margin-bottom: 40px;
   position: relative;
+  &:last-child {
+    @include tablets {
+      justify-content: center;
+    }
+  }
 }
 
 .order-form__block {
@@ -73,6 +54,9 @@
   border-bottom: 2px solid $links-color;
   margin-right: 100px;
   padding: 30px 0;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .order-form__title {
@@ -122,5 +106,8 @@
   background-color: rgba($btn-color, 1.2);
   &:hover {
     cursor: pointer;
+    color: rgba($btn-color, 1.2);
+    background-color: $text-color;
+    transition: 1s;
   }
 }

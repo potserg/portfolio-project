@@ -1,12 +1,18 @@
 .menu__list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .menu__item {
-  margin-left: 50px;
-  &:first-child {
+  cursor: pointer;
+  margin-right: 30px;
+  padding: 5px;
+  &:last-child {
     margin-left: 0;
+  }
+  &:hover {
+    border-bottom: 2px solid $links-color;
   }
 }
 

@@ -17,6 +17,7 @@
 
 .promo__content {
   display: flex;
+  position: relative;
 }
 
 .promo__title {
@@ -26,14 +27,25 @@
   font-size: 72px;
   line-height: 1;
   color: $text-color;
+  @include tablets {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .promo__subtitle {
   font-size: 18px;
   line-height: 2;
-  color: $subtitle-color;
+  color: $grey-color;
   text-align: right;
   margin-right: 60px;
+  @include tablets {
+    width: 200px;
+    margin-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
 }
 
 .promo__scroll {
@@ -46,14 +58,23 @@
 .promo__scroll_btn {
   display: flex;
   align-items: center;
-
   &--text {
+    color: $text-color;
     margin-right: 15px;
   }
-
   &--icon {
-    fill: $text-color;
+    fill: $icons-color;
     width: 25px;
     height: 35px;
+  }
+  &:hover {
+    .promo__scroll_btn--text {
+      color: $icons-color;
+      transition: 1s;
+    }
+    .promo__scroll_btn--icon {
+      fill: $text-color;
+      transition: 1s;
+    }
   }
 }

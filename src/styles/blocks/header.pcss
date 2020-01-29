@@ -12,13 +12,59 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .header__logo {
+  width: 10%;
   font-size: 36px;
   font-weight: 800;
 }
 
 .header__menu {
+  width: 60%;
   margin: 0 90px;
+  display: flex;
+  align-items: center;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.header__socials_ham-menu {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include tablets {
+    width: 50%;
+    justify-content: center;
+  }
+
+}
+
+.header__ham-menu {
+  display: none;
+  width: 40px;
+  height: 40px;
+  margin-left: 90px;
+  &_btn {
+    &:hover {
+      .header__ham-menu_icon {
+        stroke: $text-color;
+        transition: 1s;
+      }
+    }
+  }
+  &_icon {
+    stroke-width: 5px;
+    stroke: $icons-color;
+    width: 40px;
+    height: 40px;
+  }
+  @include tablets {
+    display: block;
+    margin-left: 50px;
+  }
 }
