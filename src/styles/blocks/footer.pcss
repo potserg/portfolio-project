@@ -4,6 +4,7 @@
   background-color: $about-color;
   position: relative;
   padding: 90px 0 25px 0;
+
   @include tablets {
     height: 480px;
     padding: 45px 0 25px 0;
@@ -21,6 +22,7 @@
   width: 35%;
   display: flex;
   justify-content: space-between;
+  
   @include tablets {
     flex-direction: column;
     justify-content: flex-start;
@@ -33,6 +35,7 @@
   line-height: 1;
   color: $copyright-color;
   margin-right: 60px;
+  
   @include tablets {
     margin-bottom: 30px;
   }
@@ -78,9 +81,11 @@
   width: 100%;
   display: flex;
   margin-bottom: 30px;
+  
   &:last-child {
     margin-bottom: 0;
   }
+  
   @include tablets {
     flex-direction: column;
   }
@@ -91,16 +96,19 @@
   flex-direction: column;
   align-items: flex-start;
   margin-right: 130px;
+  
   &_text {
     font-size: 16px;
     font-weight: 600;
     line-height: 1.7;
     color: $grey-color;
     margin-bottom: 30px;
+   
     @include tablets {
       margin-bottom: 15px;
     }
   }
+  
   @include tablets {
     margin-right: 0;
     margin-bottom: 50px;
@@ -115,6 +123,7 @@
   font-weight: 600;
   line-height: 1.7;
   margin: 0;
+  
   &_text {
     color: $grey-color;
     margin-bottom: 30px;

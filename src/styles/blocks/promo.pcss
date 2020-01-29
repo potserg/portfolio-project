@@ -27,6 +27,7 @@
   font-size: 72px;
   line-height: 1;
   color: $text-color;
+ 
   @include tablets {
     flex-direction: column-reverse;
     align-items: center;
@@ -40,6 +41,7 @@
   color: $grey-color;
   text-align: right;
   margin-right: 60px;
+ 
   @include tablets {
     width: 200px;
     margin-right: 0;
@@ -58,15 +60,18 @@
 .promo__scroll_btn {
   display: flex;
   align-items: center;
+ 
   &--text {
     color: $text-color;
     margin-right: 15px;
   }
+ 
   &--icon {
     fill: $icons-color;
     width: 25px;
     height: 35px;
   }
+ 
   &:hover {
     .promo__scroll_btn--text {
       color: $icons-color;

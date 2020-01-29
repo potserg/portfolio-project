@@ -1,4 +1,4 @@
-mixin circle(mod)
-  svg.circle__icon(viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg")
-    circle.circle__icon--grey(cx="75" cy="75" r="65")
-    circle(class='circle__icon--blue circle__icon--' + mod cx="75" cy="75" r="65")
+mixin circle()
+  svg.circle__icon(viewBox="0 0 150 150")
+    circle.circle__icon.circle__icon--grey(cx="75" cy="75" r="65")
+    circle.circle__icon.circle__icon--blue(cx="75" cy="75" r="65" ref="color-circle" transform="rotate(180, 75, 75)")

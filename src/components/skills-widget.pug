@@ -1,0 +1,21 @@
+script(type="text/x-template")#skills-list
+  ul.skills__list
+    li.skills__item(v-for="skill in skills")
+      skills-row(
+        :skill="skill"
+      )
+
+script(type="text/x-template")#skills-row
+  .skills-row
+    .skills-row__title {{skill.skillsGroup}}
+    ul.circle__list
+      li.circle__item(v-for="(skillPercent, skillName) in skill.skills")
+        skill(
+          :skillName="skillName"
+          :skillPercent="skillPercent"
+        )
+
+script(type="text/x-template")#skill
+  .skill
+    +circle
+    span.circle__title {{skillName}}

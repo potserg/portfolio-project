@@ -17,13 +17,16 @@
   width: 50px;
   height: 50px;
   margin-left: 15px;
+  
   &:first-child {
     margin-left: 0;
   }
+  
   &:hover {
     border-color: $text-color;
     transition: 1s;
   }
+  
   @include tablets {
     margin-left: 10px;
   }
@@ -33,6 +36,7 @@
 .socials__link {
   width: 30px;
   height: 30px;
+  
   &:hover {
     .socials__icon {
       fill: $text-color;

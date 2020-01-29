@@ -37,6 +37,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
   @include tablets {
     width: 50%;
     justify-content: center;
@@ -49,6 +50,7 @@
   width: 40px;
   height: 40px;
   margin-left: 90px;
+  
   &_btn {
     &:hover {
       .header__ham-menu_icon {
@@ -57,12 +59,14 @@
       }
     }
   }
+  
   &_icon {
     stroke-width: 5px;
     stroke: $icons-color;
     width: 40px;
     height: 40px;
   }
+  
   @include tablets {
     display: block;
     margin-left: 50px;

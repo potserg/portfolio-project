@@ -26,6 +26,7 @@
   display: flex;
   width: 80%;
   position: relative;
+  
   @include tablets {
     width: 100%;
   }
@@ -37,6 +38,7 @@
   align-items: flex-start;
   width: 100%;
   position: relative;
+  
   @include tablets {
     flex-direction: column;
   }
@@ -96,9 +98,11 @@
   width: 20%;
   height: 20%;
   fill: $grey-color;
+  
   &--prev {
     transform: rotate(180deg);
   }
+  
   &:hover {
     fill: $text-color;
     transition: 1s;
@@ -109,7 +113,7 @@
   font-size: 300px;
   font-weight: 800;
   line-height: 1;
-  color: rgba($grey-color, .3);
+  color: rgba($grey-color, 0.3);
   position: absolute;
   right: -1%;
 }
@@ -119,6 +123,7 @@
   width: 25%;
   flex-direction: column;
   justify-content: flex-start;
+  
   @include tablets {
     width: 100%;
     align-items: center;
@@ -128,9 +133,11 @@
 
 .works__tags_list {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
+  
   @include tablets {
-  margin-bottom: 30px;  }
+  margin-bottom: 30px;
+  }
 }
 
 .works__tags_item {
@@ -138,9 +145,10 @@
   font-weight: 600;
   color: $grey-color;
   border-radius: 30px;
-  background-color: rgba($grey-color, .3);
+  background-color: rgba($grey-color, 0.3);
   padding: 15px 20px;
   margin-left: 20px;
+  
   &:first-child {
     margin-left: 0;
   }
@@ -162,6 +170,7 @@
   line-height: 1.7;
   color: $grey-color;
   margin-bottom: 50px;
+  
   @include tablets {
     width: 70%;
     text-align: center;
