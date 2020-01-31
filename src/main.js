@@ -7,6 +7,7 @@ import "./scripts/parallax-fest";
 import anchorScroll from  "./scripts/anchorScroll";
 import "./scripts/skills";
 import "./scripts/works";
+import "./scripts/reviews";
 import "./scripts/paralax-music";
 
 anchorScroll();

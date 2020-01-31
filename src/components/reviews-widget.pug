@@ -1,0 +1,56 @@
+script(type="text/x-template")#flickity-container
+  .reviews__carusel-wrapper
+    .reviews__carusel_move
+      button.reviews__carusel_btn(@click="previous()")
+        +icon('arrow-down', 'reviews__carusel_btn-icon reviews__carusel_btn-icon--prev')
+      button.reviews__carusel_btn(@click="next()")
+        +icon('arrow-down', 'reviews__carusel_btn-icon reviews__carusel_btn-icon--next')
+    flickity.reviews__carusel(ref="flickity" :options="flickityOptions")
+      .reviews__carusel_cell
+        .reviews__item
+          .reviews__img
+            +icon('quote', 'reviews__icon')
+          .reviews__desc
+            p.reviews__desc_text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool. А это что-то да значит!
+            .reviews__desc_author
+              .reviews__desc_author-foto
+                +image('content/reviews_1.png', 'reviews__desc_author-pic', 'Фотография автора отзыва')
+              .reviews__desc_author-text
+                .reviews__desc_author--name Ковальчук Дмитрий
+                .reviews__desc_author--range Основатель школы LoftSchool
+      .reviews__carusel_cell
+        .reviews__item
+          .reviews__img
+            +icon('quote', 'reviews__icon')
+          .reviews__desc
+            p.reviews__desc_text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых бабушках!
+            .reviews__desc_author
+              .reviews__desc_author-foto
+                +image('content/reviews_2.png', 'reviews__desc_author-pic', 'Фотография автора отзыва')
+              .reviews__desc_author-text
+                .reviews__desc_author--name Владимир Сабанцев
+                .reviews__desc_author--range Преподователь школы LoftSchool
+      .reviews__carusel_cell
+        .reviews__item
+          .reviews__img
+            +icon('quote', 'reviews__icon')
+          .reviews__desc
+            p.reviews__desc_text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых бабушках!
+            .reviews__desc_author
+              .reviews__desc_author-foto
+                +image('content/reviews_2.png', 'reviews__desc_author-pic', 'Фотография автора отзыва')
+              .reviews__desc_author-text
+                .reviews__desc_author--name Владимир Сабанцев
+                .reviews__desc_author--range Преподователь школы LoftSchool
+      .reviews__carusel_cell
+        .reviews__item
+          .reviews__img
+            +icon('quote', 'reviews__icon')
+          .reviews__desc
+            p.reviews__desc_text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых бабушках!
+            .reviews__desc_author
+              .reviews__desc_author-foto
+                +image('content/reviews_2.png', 'reviews__desc_author-pic', 'Фотография автора отзыва')
+              .reviews__desc_author-text
+                .reviews__desc_author--name Владимир Сабанцев
+                .reviews__desc_author--range Преподователь школы LoftSchool
