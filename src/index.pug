@@ -37,12 +37,7 @@ html(lang="ru")
         include ./components/parallax-music.pug
         .feedback__section
           .container.feedback__container
-            section.reviews#reviews
-              .reviews__slider 
-                include ./components/reviews.pug
-                .reviews__widget
-                  #flickity-component
-                    include ./components/reviews-widget.pug
+            include ./components/reviews.pug
             include ./components/order.pug
       footer.footer
         .container.footer__container
