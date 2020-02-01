@@ -2,11 +2,23 @@ import Vue from "vue";
 
 const thumbs = {
   template: "#slider-thumbs",
-  props: ["works", "currentWork"]
+  props: ["works", "currentWork", "currentIndex"],
+
+  computed: {
+    translate() {
+      const countThumbs = 3;
+      const step = 100 / countThumbs;
+
+      if (this.currentIndex >= this.works.length - 1) return;
+      if (this.currentIndex < (countThumbs - 1)) return 0;
+      if (this.currentIndex >= (countThumbs - 1)) return step * (this.currentIndex - 1);
+    }
+  }
 };
 
 const btns = {
-  template: "#slider-btns"
+  template: "#slider-btns",
+  props: ["current", "worksLength"]
 };
 
 const display = {
@@ -15,7 +27,12 @@ const display = {
     thumbs, 
     btns
   },
-  props: ["works", "currentWork", "currentIndex"]
+  props: ["works", "currentWork", "currentIndex"],
+  methods: {
+    handleSlide(direction) {
+       this.$emit('slide', direction);
+    }
+  }
 };
 
 const tags = {
@@ -68,6 +85,9 @@ new Vue({
           break;
         case "prev":
           this.currentIndex--;
+          break;
+        default:
+          this.currentIndex = direction;
           break;
       }
     },

@@ -2,19 +2,19 @@
   {
     "skillsGroup": "Frontend",
     "skills": {
-      "HTML5": 50,
-      "CSS3": 40,
-      "Javascript": 25,
-      "jQuery": 20
+      "HTML5": 30,
+      "CSS3": 25,
+      "Javascript": 10,
+      "jQuery": 5
     }
   },
   {
     "skillsGroup": "Workflow",
     "skills": {
-      "Git": 75,
-      "Terminal": 50,
-      "Gulp": 25,
-      "Webpack": 40    
+      "Git": 50,
+      "Terminal": 40,
+      "Gulp": 10,
+      "Webpack": 20    
     }
   }
 ]
