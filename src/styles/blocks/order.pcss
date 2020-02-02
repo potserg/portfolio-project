@@ -58,9 +58,26 @@
   border-bottom: 2px solid $links-color;
   margin-right: 100px;
   padding: 30px 0;
+  position: relative;
+  cursor: pointer;
   
   &:last-child {
     margin-right: 0;
+  }
+
+  &:hover {
+    border-color: $hover-color;
+    transition: $speed;
+
+    .order-form__title {
+      bottom: 80%;
+      transition: $speed;
+    }
+
+    .order-form__img {
+      fill: $hover-color;
+      transition: $speed;
+    }
   }
 }
 
@@ -69,12 +86,13 @@
   font-weight: 600;
   color: $icons-color;
   padding-left: 50px;
-  margin-bottom: 30px;
+  position: absolute;
+  bottom: 40%;
 }
 
 .order-form__value {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .order-form__img {
@@ -108,12 +126,11 @@
   text-transform: uppercase;
   color: $text-color;
   border: 2px solid transparent;
-  background-color: rgba($btn-color, 1.2);
+  background: linear-gradient(to right, $start-color, $end-color);
   
   &:hover {
     cursor: pointer;
-    color: rgba($btn-color, 1.2);
-    background-color: $text-color;
-    transition: 1s;
+    background: linear-gradient(to left, $start-color, $end-color);
+    transition: $speed;
   }
 }

@@ -6,15 +6,23 @@
 
 .menu__item {
   cursor: pointer;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
   margin-right: 30px;
-  padding: 5px;
+
   &:last-child {
-    margin-left: 0;
+    margin-right: 0;
   }
+
+  &.active {
+    border-bottom: 3px solid $hover-color;
+    transition: $speed;
+  }
+
   &:hover {
-    border-bottom: 2px solid $links-color;
-    transition: 1s;
+    .menu__link {
+      color: $hover-color;
+      transition: $speed;
+    }
   }
 }
 

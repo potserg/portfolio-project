@@ -62,24 +62,24 @@
   align-items: center;
  
   &--text {
-    color: $text-color;
+    color: $links-color;
     margin-right: 15px;
   }
  
   &--icon {
-    fill: $icons-color;
+    fill: $links-color;
     width: 25px;
     height: 35px;
   }
  
   &:hover {
     .promo__scroll_btn--text {
-      color: $icons-color;
-      transition: 1s;
+      color: $hover-color;
+      transition: $speed;
     }
     .promo__scroll_btn--icon {
-      fill: $text-color;
-      transition: 1s;
+      fill: $hover-color;
+      transition: $speed;
     }
   }
 }

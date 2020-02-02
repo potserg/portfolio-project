@@ -1,3 +1,7 @@
+.socials {
+  flex: 1;
+}
+
 .socials--footer {
   .socials__item {
     border: 2px solid $icons-color;
@@ -23,8 +27,8 @@
   }
   
   &:hover {
-    border-color: $text-color;
-    transition: 1s;
+    border-color: $hover-color;
+    transition: $speed;
   }
   
   @include tablets {
@@ -39,8 +43,8 @@
   
   &:hover {
     .socials__icon {
-      fill: $text-color;
-      transition: 1s;
+      fill: $hover-color;
+      transition: $speed;
     }
   }
 }
