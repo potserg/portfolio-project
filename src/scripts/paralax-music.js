@@ -11,7 +11,6 @@ function moveLayersDependsOnScroll(wScroll) {
 
 window.addEventListener('scroll', e => {
   const parallaxCoord = parallax.getBoundingClientRect();
-  console.log(document.body.clientHeight);
   if (parallaxCoord.top <= parallax.clientHeight && parallaxCoord.bottom > 0) {
     const wScroll = window.pageYOffset;
     moveLayersDependsOnScroll(wScroll);

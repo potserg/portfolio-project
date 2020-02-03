@@ -1,31 +1,26 @@
 .menu__list {
+  height: 100%;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .menu__item {
-  cursor: pointer;
-  border: 3px solid transparent;
-  margin-right: 30px;
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  &.active {
-    border-bottom: 3px solid $hover-color;
-    transition: $speed;
-  }
-
-  &:hover {
-    .menu__link {
-      color: $hover-color;
-      transition: $speed;
-    }
-  }
+  height: 100%;
 }
 
 .menu__link {
   color: $links-color;
+  border: 3px solid transparent;
+  padding: 0 30px 40px;
+
+  &:hover {
+    color: $hover-color;
+    transition: $speed;
+  }
+
+  &.active {
+    border-bottom: 3px solid $fixhover-color;
+    transition: $speed;
+  }
 }

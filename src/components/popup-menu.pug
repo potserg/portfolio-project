@@ -1,0 +1,34 @@
+.popup-menu
+  button.popup-menu__close_btn
+    +icon('close-menu', 'popup-menu__close-icon')
+  .popup-menu__container
+    .popup-menu__content
+      .popup__menu
+        +nav('popup menu', [
+          {
+            name: "Главная",
+            anchor: "promo"
+          },
+          {
+            name: "Обо мне",
+            anchor: "profile"
+          },
+          {
+            name: "Навыки",
+            anchor: "skills"
+          },
+          {
+            name: "Работы",
+            anchor: "works"
+          },
+          {
+            name: "Отзывы",
+            anchor: "reviews"
+          },
+          {
+            name: "Связаться",
+            anchor: "order"
+          }
+        ])
+      .popup__socials
+        +socials('popup')

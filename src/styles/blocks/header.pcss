@@ -6,9 +6,54 @@
   height: 150px;
   width: 100%;
   z-index: 15;
+
+  .menu__link {
+
+    &.active {
+      border-bottom: 3px solid $hover-color;
+      transition: $speed;
+    }
+  }
+
+  &.fixed {
+    position: fixed;
+    height: 110px;
+    background-color: $text-color;
+    color: $font-color;
+    box-shadow: 0 5px 5px $font-color;
+    transition: $speed;
+
+    .header__logo {
+      color: $font-color;
+    }
+    
+    .menu__link {
+      color: $font-color;
+
+      &:hover {
+        color: $fixhover-color;
+        transition: $speed;
+      }
+
+      &.active {
+        border-bottom: 3px solid $fixhover-color;
+        transition: $speed;
+      }
+    }
+    
+    .socials__icon {
+      fill: $font-color;
+
+      &:hover {
+        fill: $fixhover-color;
+        transition: $speed;
+      }
+    }
+  }
 }
 
 .header__container {
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,10 +63,11 @@
 .header__logo {
   font-size: 36px;
   font-weight: 800;
+  color: $text-color;
 }
 
 .header__menu {
-  margin: 0 90px;
+  margin: 0 10px;
   display: flex;
   align-items: center;
 

@@ -1,5 +1,7 @@
 export default function anchorScroll() {
   const links = document.querySelectorAll('a[href^="#"]');
+  const sections = document.querySelectorAll('section');
+  console.log(sections);
   const speed = 0.75;
   let sectionCoord;
   let windowY;
@@ -14,6 +16,21 @@ export default function anchorScroll() {
 
       sectionCoord = section.getBoundingClientRect().top;
       windowY = window.pageYOffset;
+
+      for(let i = 0 ; i< links.length; i++) {
+        links[i].classList.remove('active');
+      }
+      e.target.classList.add('active');
+
+      for (let i = 0; i < sections.length; i++) {
+
+        if (sections[i].classList.contains('active')) {
+          sections[i].classList.remove("active");
+        } else {
+          section.classList.add('active');
+        }
+      }
+
       start = 0;
 
       requestAnimationFrame(countStep);
