@@ -10,6 +10,7 @@ import "./scripts/popup-menu";
 import "./scripts/skills";
 import "./scripts/works";
 import "./scripts/reviews";
+import "./scripts/order";
 import "./scripts/paralax-music";
 
 anchorScroll();

@@ -5,6 +5,12 @@
   @include tablets {
     margin-top: 20px;
   }
+
+  @include phones {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .circle__item {
@@ -21,6 +27,12 @@
 
   @include tablets {
     margin-left: 20px;
+  }
+
+  @include phones {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 0;
   }
 }
 

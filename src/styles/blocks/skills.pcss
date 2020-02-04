@@ -15,6 +15,10 @@
     clip-path: polygon(0 0, 0 13.3%, 77.8% 100%, 100% 13.3%, 100% 0);
     position: absolute;
     top: 0;
+    
+    @include phones {
+      height: 50px;
+    }
   }
 
   &::after {
@@ -35,6 +39,10 @@
       transform: rotate(90deg);
       top: 42%;
       left: 40%;
+    }
+
+    @include phones {
+      top: 45%;
     }
   }
 }
@@ -68,6 +76,11 @@
     height: 20%;
     margin-bottom: 0;
   }
+
+  @include phones {
+    width: 100%;
+    justify-content: flex-end;
+  }
 }
 
 .skills__title {
@@ -80,6 +93,11 @@
     text-align: center;
     margin-bottom: 30px;
   }
+
+  @include phones {
+    text-align: start;
+    margin-bottom: 20px;
+  }
 }
 
 .skills__subtitle {
@@ -89,6 +107,10 @@
   
   @include tablets {
     text-align: center;
+  }
+
+  @include phones {
+    text-align: start;
   }
 }
 
@@ -102,6 +124,22 @@
 .skills__list {
   display: flex;
   flex-direction: column;
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.skills-row {
+  @include phones {
+    width: 100%;
+  }
+}
+
+.skills-row__title {
+  @include phones {
+    text-align: center;
+  }
 }
 
 .skills__item {

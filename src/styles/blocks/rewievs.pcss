@@ -1,9 +1,9 @@
 .reviews {
   width: 100%;
-  height: 40%;
+  height: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   position: relative;
 }
 
@@ -11,7 +11,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  margin: 5% 0;
+  margin-top: 120px;
   position: relative;
 }
 
@@ -53,13 +53,13 @@
   justify-content: center;
   position: relative;
   margin-right: 25px;
+  transition: border $speed;
 
   &:hover {
     border-color: $hover-color;
-    transition: $speed;
+
     .reviews__carusel_btn-icon {
       fill: $hover-color;
-      transition: $speed;
     }
   }
 }
@@ -68,7 +68,8 @@
   width: 12px;
   height: 12px;
   fill: $links-color;
-
+  transition: fill $speed;
+  
   &--prev {
     transform: rotate(180deg);
   }
