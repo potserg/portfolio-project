@@ -1,11 +1,16 @@
 import Vue from 'vue';
 import Flickity from 'vue-flickity';
 
+const btns = {
+  template: "#reviews-btns",
+  props: ["current", "reviewsLength"]
+};
+
 new Vue({
   el: "#reviews-component",
   template: "#reviews-container",
   components: {
-    Flickity
+    Flickity, btns
   },
   data() {
     return {
@@ -16,9 +21,16 @@ new Vue({
         wrapAround: false,
         cellAlign: "left",
         setGallerySize: false,
-        groupCells: 2
+        groupCells: 1
       },
-      reviews: []
+      reviews: [],
+      currentIndex: 0
+    };
+  },
+
+  computed: {
+    currentReview() {
+      return this.reviews[this.currentIndex]
     }
   },
   
@@ -35,11 +47,22 @@ new Vue({
     
     next() {
       this.$refs.flickity.next();
+      this.currentIndex++;
+      console.log(this.currentIndex);
     },
     previous() {
       this.$refs.flickity.previous();
+      this.currentIndex--;
+      console.log(this.currentIndex);
     }
+
   },
+
+  // watch: {
+  //   currentIndex(value) {
+  //     this.makeDisabledButtons(value)
+  //   }
+  // },
   
   created() {
     const data = require("../data/reviews.json");

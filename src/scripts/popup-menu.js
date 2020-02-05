@@ -3,44 +3,47 @@ const popupClose = document.querySelector('.popup-menu__close_btn');
 const popupMenu = document.querySelector('.popup-menu');
 const popupLinks = document.querySelectorAll('.popup.menu__link');
 const step = 0.2;
-let op = 0;
 let intervalId;
+let op = 0;
 
-let increaseOp = (e => {
+let increaseOp = (() => {
   intervalId = setInterval(() => {
     op += step;
     popupMenu.style.opacity = op;
-
-    if (op > 0.9) {
+    console.log(op);
+    
+    if (op >= 0.9) {
       clearInterval(intervalId);
     }
-
-  }, 100);
+    
+    popupMenu.style.display = 'flex';
+  }, 1000);
 })
 
 popupOpen.addEventListener('click', e => {
   e.preventDefault();
+  
   increaseOp();
-  popupMenu.style.display = 'flex';
 });
 
-let decreaseOp = (e => {
+let decreaseOp = (() => {
   intervalId = setInterval(() => {
     op -= step;
     popupMenu.style.opacity = op;
-
-    if (op < 0.2) {
+    console.log(op);
+    if (op <= 0.2) {
       clearInterval(intervalId);
       popupMenu.style.display = '';
     }
-
-  }, 100);
-})
-
-popupClose.addEventListener('click', e => {
-  e.preventDefault();
-  decreaseOp();
+    
+  }, 1000);
 });
+
+// popupClose.addEventListener('click', e => {
+//   e.preventDefault();
+  
+//   decreaseOp();
+// });
 
 popupMenu.addEventListener('click', e => {
   if (e.target === popupMenu) {
@@ -48,10 +51,18 @@ popupMenu.addEventListener('click', e => {
   }
 });
 
-for (let i = 0; i < popupLinks.length; i++) {
+window.addEventListener('scroll', () => {
+  const wScroll = window.pageYOffset;
 
+  if (op > 0.9) {
+    decreaseOp();
+  }
+});
+
+for (let i = 0; i < popupLinks.length; i++) {
   popupLinks[i].addEventListener('click', e => {
     e.preventDefault();
+
     decreaseOp();
   });
 };

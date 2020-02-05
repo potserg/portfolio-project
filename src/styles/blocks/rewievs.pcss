@@ -57,9 +57,19 @@
 
   &:hover {
     border-color: $hover-color;
-
     .reviews__carusel_btn-icon {
       fill: $hover-color;
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+
+    &:hover {
+      border-color: $links-color;
+      .reviews__carusel_btn-icon {
+        fill: $links-color;
+      }
     }
   }
 }

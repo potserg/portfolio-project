@@ -6,13 +6,16 @@ section.reviews#reviews
 
 script(type="text/x-template")#reviews-container
   .reviews__carusel-wrapper
-    .reviews__carusel_move
-      button.reviews__carusel_btn(@click="previous()")
-        +icon('arrow-down', 'reviews__carusel_btn-icon reviews__carusel_btn-icon--prev')
-      button.reviews__carusel_btn(@click="next()")
-        +icon('arrow-down', 'reviews__carusel_btn-icon reviews__carusel_btn-icon--next')
+    btns(
+      :reviewsLength="reviews.length"
+      :current="currentIndex"
+      @prev="previous()"
+      @next="next()"
+    )
     flickity.reviews__carusel(ref="flickity" :options="flickityOptions")
-      .reviews__carusel_cell(v-for="review in reviews")
+      .reviews__carusel_cell(
+        v-for="review in reviews"
+        )
         .reviews__item
           .reviews__img
             +icon('quote', 'reviews__icon')
@@ -24,3 +27,15 @@ script(type="text/x-template")#reviews-container
               .reviews__desc_author-text
                 .reviews__desc_author--name {{review.author}}
                 .reviews__desc_author--range {{review.range}}
+script(type="text/x-template")#reviews-btns
+  .reviews__carusel_move
+    button.reviews__carusel_btn.reviews__carusel_btn--prev(
+      :disabled="current <= 0"
+       @click.prevent="$emit('prev')"
+      )
+      +icon('arrow-down', 'reviews__carusel_btn-icon reviews__carusel_btn-icon--prev')
+    button.reviews__carusel_btn.reviews__carusel_btn--next(
+      :disabled="current >= (reviewsLength - 1)"
+      @click.prevent="$emit('next')"
+      )
+      +icon('arrow-down', 'reviews__carusel_btn-icon reviews__carusel_btn-icon--next')

@@ -28,6 +28,7 @@ const display = {
     btns
   },
   props: ["works", "currentWork", "currentIndex"],
+  
   methods: {
     handleSlide(direction) {
        this.$emit('slide', direction);
