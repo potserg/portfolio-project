@@ -13,25 +13,26 @@ new Vue({
         initialIndex: 0,
         prevNextButtons: false,
         pageDots: false,
-        wrapAround: true,
+        wrapAround: false,
         cellAlign: "left",
+        setGallerySize: false,
         groupCells: 2
       },
       reviews: []
     }
   },
-
+  
   methods: {
     
     makeArrRequiredImages(data) {
       return data.map(item => {
         const requiredPic = require(`../images/content/${item.photo}`);
         item.photo = requiredPic;
-
+        
         return item;
       });
     },
-  
+    
     next() {
       this.$refs.flickity.next();
     },
@@ -39,7 +40,7 @@ new Vue({
       this.$refs.flickity.previous();
     }
   },
-
+  
   created() {
     const data = require("../data/reviews.json");
     this.reviews = this.makeArrRequiredImages(data);

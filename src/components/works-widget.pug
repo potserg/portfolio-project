@@ -29,16 +29,16 @@ script(type="text/x-template")#slider-display
 script(type="text/x-template")#slider-thumbs
   .works__slider_thumbs
     ul.works__slider_thumbs-list(:style="{transform: `translateX(-${translate}%)`}")
-      li.works__slider_thumbs-item(
+      button.works__slider_thumbs-item(
         v-for="work, index in works"
+        type="button"
         :key="work.id"
         @click="$emit('slide', index)"
         :class="{active: work.id === currentWork.id}"
         :disabled="work.id === currentWork.id"
         tabIndex="-1"
         )
-        button.works__slider_thumbs-btn(type="button")
-          img(:src="work.photo" class="works__slider_thumbs-pic" alt="Миниатюра главной страницы одного из моих проектов")
+        img(:src="work.photo" class="works__slider_thumbs-pic" alt="Миниатюра главной страницы одного из моих проектов")
 
 script(type="text/x-template")#slider-btns
   .works__slider_scroll

@@ -20,10 +20,10 @@ export default function anchorScroll() {
       for(let i = 0 ; i< links.length; i++) {
         links[i].classList.remove('active');
       }
+
       e.target.classList.add('active');
 
       for (let i = 0; i < sections.length; i++) {
-
         if (sections[i].classList.contains('active')) {
           sections[i].classList.remove("active");
         } else {
@@ -34,7 +34,7 @@ export default function anchorScroll() {
       start = 0;
 
       requestAnimationFrame(countStep);
-    });
+    })
   }
 
   function countStep(time) {
@@ -54,6 +54,6 @@ export default function anchorScroll() {
     if (coordY !== windowY + sectionCoord) {
       requestAnimationFrame(countStep);
     }
-  }
+  };
 
-}
+};
