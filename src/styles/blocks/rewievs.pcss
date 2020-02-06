@@ -1,66 +1,151 @@
 .reviews {
   width: 100%;
-  height: 40%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  position: relative;
+
+  @include phones {
+    height: 40%;
+  }
 }
+
 .reviews__slider {
+  height: 100%;
   display: flex;
-  margin-bottom: 100px;
+  flex-direction: column;
+  margin-top: 120px;
+  position: relative;
 }
 
 .reviews__title {
+  width: 100%;
+  display: flex;
   font-size: 36px;
   font-weight: 700;
-  margin-right: 130px;
+  color: $text-color;
+  
+  @include phones {
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
 }
 
-.reviews__scroll {
+.reviews__widget {
+  height: 100%;
+  margin-top: 100px;
+  position: relative;
+}
+
+.reviews__carusel-wrapper {
   display: flex;
+  flex-direction: column;
 }
 
-.reviews__scroll_btn {
+.reviews__carusel_move {
+  display: flex;
+  position: absolute;
+  top: -150px;
+  left: 50%;
+
+  @include tablets {
+    left: 60%;
+  }
+  
+  @include phones {
+    left: 40%;
+    top: -75px;
+  }
+}
+
+.reviews__carusel_btn {
   width: 50px;
   height: 50px;
-  border: 2px solid $text-color;
+  border: 2px solid $links-color;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   margin-right: 25px;
+  transition: border $speed;
+
+  &:hover {
+    border-color: $hover-color;
+    .reviews__carusel_btn-icon {
+      fill: $hover-color;
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+
+    &:hover {
+      border-color: $links-color;
+      .reviews__carusel_btn-icon {
+        fill: $links-color;
+      }
+    }
+  }
 }
 
-.reviews__scroll_icon {
+.reviews__carusel_btn-icon {
   width: 12px;
   height: 12px;
-  fill: $text-color;
-  &--next {
+  fill: $links-color;
+  transition: fill $speed;
+  
+  &--prev {
     transform: rotate(180deg);
   }
 }
 
-.reviews__list {
-  display: flex;
+.reviews__carusel-wrapper {
+  height: 100%;
+}
+
+.reviews__carusel {
+  width: 100%;
+  height: 100%;
   max-width: 1000px;
   position: relative;
-  margin-bottom: 35px;
+}
+
+.reviews__carusel_cell {
+  display: flex;
+  width: 50%;
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.flickity-viewport {
+  height: 100%;
 }
 
 .reviews__item {
   display: flex;
-  width: 50%;
   margin-right: 80px;
+  position: relative;
+
+  @include tablets {
+    margin-right: 20px;
+  }
 }
 
 .reviews__img {
+  width: 25%;
+  height: 25%;
   margin-right: 25px;
+  position: relative;
 }
 
 .reviews__icon {
-  width: 100px;
-  height: 80px;
+  width: 100%;
+  height: 100%;
   fill: $quote-color;
 }
 

@@ -1,0 +1,72 @@
+script(type="text/x-template")#slider-container
+  .works__slider
+    display(
+      :works="works",
+      :currentWork="currentWork"
+      :currentIndex="currentIndex"
+      @slide="handleSlide"
+    )
+    info(
+      :currentWork="currentWork"
+    )
+
+script(type="text/x-template")#slider-display
+  .works__slider_pics(:data-slide="currentIndex + 1")
+    .works__slider_img
+      img(:src="currentWork.photo", class="works__slider_img-main" alt="Изображение главной страницы выбранного проекта из списка")
+      btns(
+        :worksLength="works.length"
+        :current="currentIndex"
+        @slide="$emit('slide', $event)"
+      )
+      thumbs(
+        :works="works"
+        :currentWork="currentWork"
+        :currentIndex="currentIndex"
+        @slide="handleSlide"
+      )
+
+script(type="text/x-template")#slider-thumbs
+  .works__slider_thumbs
+    ul.works__slider_thumbs-list(:style="{transform: `translateX(-${translate}%)`}")
+      button.works__slider_thumbs-item(
+        v-for="work, index in works"
+        type="button"
+        :key="work.id"
+        @click="$emit('slide', index)"
+        :class="{active: work.id === currentWork.id}"
+        :disabled="work.id === currentWork.id"
+        tabIndex="-1"
+        )
+        img(:src="work.photo" class="works__slider_thumbs-pic" alt="Миниатюра главной страницы одного из моих проектов")
+
+script(type="text/x-template")#slider-btns
+  .works__slider_scroll
+    button.works__slider_scroll-btn(
+      type="button"
+      :disabled="current >= (worksLength - 1)"
+      @click.prevent="$emit('slide', 'next')"
+      )
+      +icon('arrow-down', 'works__slider_scroll-icon works__slider_scroll-icon--next')
+    button.works__slider_scroll-btn(
+      type="button"
+      :disabled="current <= 0"
+      @click.prevent="$emit('slide', 'prev')"
+      )
+      +icon('arrow-down', 'works__slider_scroll-icon works__slider_scroll-icon--prev')
+
+script(type="text/x-template")#slider-info
+  .works__slider_info
+    tags(
+      :tags="tagsArray"
+    )
+    h4.works__slider_title {{currentWork.title}}
+    p.works__slider_subtitle {{currentWork.desc}}
+    a.works__slider_link(:href="currentWork.link")
+      .works__slider_link-img
+        +icon('link', 'works__slider-link_icon')
+      .works__slider_link-text Посмотреть сайт
+
+script(type="text/x-template")#slider-tags
+  ul.works__slider_tags-list
+    li.works__slider_tags-item(v-for="tag in tags") {{tag}}

@@ -2,6 +2,12 @@
   "text-color": "#ffffff",
   "links-color": "#dddddf",
   "icons-color": "#534d5c",
+  "hover-color": "#ff9a00",
+  "href-color": "#4b6fd7",
+  "start-color": "#0066ef",
+  "end-color": "#0089f2",
+  "font-color": "#414c63",
+  "fixhover-color": "#5500f2",
   "subtitle-color": "#a4aac6",
   "purple-color": "#6d5ea9",
   "grey-color": "#84808d",
@@ -15,9 +21,9 @@
   "quote-color": "#1e162c",
   "copyright-color": "#281a39",
   "btn-color": "#3f70eb",
+  "speed": "0.5s",
   "bp-desktop-hd": "1800px",
   "bp-desktop": "1200px",
   "bp-tablets": "768px",
-  "bp-phones": "480px",
-  "my-name": "Сергей Потолицын"
+  "bp-phones": "480px"
 }

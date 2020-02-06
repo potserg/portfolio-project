@@ -1,4 +1,4 @@
-section.order
+section.order#order
   h3.order__title Связаться со мной
   .order__content
     form.order-form
@@ -8,20 +8,20 @@ section.order
           .order-form__value
             .order-form__img
               +icon('user', 'order-icon')
-            input.order-form__input(type='text' name='name' placeholder='Захар Прохоров')
+            input.order-form__input(type='text' name='name')
         label.order-form__block
           .order-form__title Введите ваш e-mail
           .order-form__value
             .order-form__img
               +icon('envelope', 'order-icon')
-            input.order-form__input(type='email' name='to' placeholder='email@mail.com')
+            input.order-form__input(type='email' name='to')
       .order-form__row
         label.order-form__block
           .order-form__title Сообщение к письму
           .order-form__value
             .order-form__img
               +icon('message', 'order-icon')
-            textarea.order-form__input.order-form__input--textarea(name='comment' placeholder='Интересует красивый и функциональный лендинг. Какова цена вопроса?')
+            textarea.order-form__input.order-form__input--textarea(name='comment')
       .order-form__row
         label.order-form__btn
-          input.order-form__btn(type='submit' value='Отправить')#send-order
+          input.order-form__btn_send(type='submit' value='Отправить')#send-order
