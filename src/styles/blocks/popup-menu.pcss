@@ -1,22 +1,28 @@
 .popup-menu {
-  display: none;
-  width: 320px;
+  width: 50%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
   position: fixed;
   top: 0;
-  right: 0;
+  left: 50%;
   background-color: $text-color;
-  opacity: 0;
-  z-index: 200;
-
+  z-index: 90;
+  transition: $speed visibility linear, $speed opacity linear;
+  
   @include phones {
     width: 100%;
+    left: 0;
   }
-}
 
-.popup-menu__container {
-  height: 100%;
-  margin: 50px;
+  &.fixed {
+    visibility: visible;
+    opacity: 1;
+
+  }
 }
 
 .popup-menu__close_btn {
@@ -42,12 +48,13 @@
 }
 
 .popup-menu__content {
-  height: 100%;
+  width: max-content;
+  height: max-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  
+  margin-left: 50px;
 }
 
 .popup__menu {
@@ -63,6 +70,10 @@
 
   &.menu__item {
     margin-bottom: 40px;
+
+    @include phones {
+      width: 100%;
+    }
   }
 
   &.menu__link {
@@ -70,6 +81,10 @@
     font-weight: 600;
     color: $font-color;
     padding: 0 0 10px;
+
+    &.active {
+      border-bottom: 3px solid $fixhover-color;
+    }
 
     &:hover {
       color: $fixhover-color;

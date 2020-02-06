@@ -1,10 +1,17 @@
-.socials {
-  flex: 1;
-}
-
 .socials--header {
+  opacity: 1;
+  transition: opacity $speed;
+
   @include phones {
     display: none;
+  }
+
+  &.closed {
+    opacity: 0;
+    
+    .socials__link {
+      cursor: default;
+    }
   }
 }
 
@@ -12,8 +19,6 @@
   .socials__item {
     border: 2px solid $icons-color;
     border-radius: 50%;
-
-    
   }
 }
 
@@ -48,6 +53,7 @@
 }
 
 .socials__link {
+  cursor: pointer;
   width: 30px;
   height: 30px;
   position: relative;

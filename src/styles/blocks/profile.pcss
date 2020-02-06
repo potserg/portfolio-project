@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 100px;
+  padding-top: 150px;
  
   @include phones {
     flex-direction: column;
@@ -37,9 +38,19 @@
   object-fit: cover;
 }
 
+.profile__text {
+  @include phones {
+    width: 100%;
+  }
+}
+
 .profile__data {
   font-size: 16px;
   font-weight: 600;
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .profile__data_cell {
@@ -82,6 +93,7 @@
   margin-bottom: 40px;
 
   @include phones {
+    width: 70%;
     margin-bottom: 30px;
   }
 }

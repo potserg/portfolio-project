@@ -9,7 +9,7 @@
   @include phones {
     width: 100%;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 
@@ -30,9 +30,13 @@
   }
 
   @include phones {
+    width: 45%;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-left: 0;
+
+    &:nth-child(odd) {
+      margin-left: 0;
+    }
   }
 }
 

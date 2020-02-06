@@ -1,68 +1,31 @@
-const popupOpen = document.querySelector('.header__ham-menu_btn');
-const popupClose = document.querySelector('.popup-menu__close_btn');
+const popupBtn = document.querySelector('.header__ham-menu');
 const popupMenu = document.querySelector('.popup-menu');
 const popupLinks = document.querySelectorAll('.popup.menu__link');
-const step = 0.2;
-let intervalId;
-let op = 0;
+const socials = document.querySelector('.socials--header');
+const wrapper = document.querySelector('.wrapper');
 
-let increaseOp = (() => {
-  intervalId = setInterval(() => {
-    op += step;
-    popupMenu.style.opacity = op;
-    console.log(op);
-    
-    if (op >= 0.9) {
-      clearInterval(intervalId);
-    }
-    
-    popupMenu.style.display = 'flex';
-  }, 1000);
-})
 
-popupOpen.addEventListener('click', e => {
-  e.preventDefault();
-  
-  increaseOp();
-});
+const toggleMenu = function() {
+  popupMenu.classList.toggle('fixed');
+  popupBtn.classList.toggle('open');
+  socials.classList.toggle('closed');
+  wrapper.classList.toggle('hidden');
+}
 
-let decreaseOp = (() => {
-  intervalId = setInterval(() => {
-    op -= step;
-    popupMenu.style.opacity = op;
-    console.log(op);
-    if (op <= 0.2) {
-      clearInterval(intervalId);
-      popupMenu.style.display = '';
-    }
-    
-  }, 1000);
-});
-
-// popupClose.addEventListener('click', e => {
-//   e.preventDefault();
-  
-//   decreaseOp();
-// });
-
-popupMenu.addEventListener('click', e => {
-  if (e.target === popupMenu) {
-    decreaseOp();
-  }
-});
-
-window.addEventListener('scroll', () => {
-  const wScroll = window.pageYOffset;
-
-  if (op > 0.9) {
-    decreaseOp();
-  }
+popupBtn.addEventListener('click', e => {
+  e.stopPropagation();
+  toggleMenu();
 });
 
 for (let i = 0; i < popupLinks.length; i++) {
   popupLinks[i].addEventListener('click', e => {
-    e.preventDefault();
-
-    decreaseOp();
+    toggleMenu();
   });
-};
+}
+
+document.addEventListener('click', e => {
+  console.log(e);
+  if (e.target === popupMenu) {
+    toggleMenu();
+  }
+});

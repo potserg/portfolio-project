@@ -3,19 +3,28 @@
   height: 410px;
   background-color: $about-color;
   position: relative;
-  padding: 90px 0 25px 0;
+  padding: 90px 0 25px;
 
   @include tablets {
-    height: 480px;
-    padding: 45px 0 25px 0;
+    height: 550px;
+    padding: 45px 0 25px;
+  }
+
+  @include phones {
+    height: 900px;
   }
 }
 
 .footer__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
   position: relative;
+
+  @include phones {
+    width: 80%;
+    flex-direction: column;
+  }
 }
 
 .footer__author {
@@ -26,6 +35,11 @@
   @include tablets {
     flex-direction: column;
     justify-content: flex-start;
+  }
+
+  @include phones {
+    width: 100%;
+    margin-bottom: 40px;
   }
 }
 
@@ -54,6 +68,10 @@
   text-transform: uppercase;
   color: $text-color;
   margin-bottom: 30px;
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .footer__author_subtitle {
@@ -62,6 +80,10 @@
   font-weight: 400;
   color: $copyright-color;
   position: relative;
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .footer__content {
@@ -71,10 +93,22 @@
   justify-content: flex-start;
   align-items: flex-start;
   position: relative;
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .footer__menu {
   margin-bottom: 50px;
+
+  @include phones {
+    width: 80%;
+  }
+
+  @include phones {
+    margin-bottom: 0;
+  }
 }
 
 .footer__contacts {

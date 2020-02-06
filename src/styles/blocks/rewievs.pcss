@@ -5,6 +5,10 @@
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
+
+  @include phones {
+    height: 40%;
+  }
 }
 
 .reviews__slider {
@@ -16,9 +20,17 @@
 }
 
 .reviews__title {
+  width: 100%;
+  display: flex;
   font-size: 36px;
   font-weight: 700;
   color: $text-color;
+  
+  @include phones {
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
 }
 
 .reviews__widget {
@@ -40,6 +52,11 @@
 
   @include tablets {
     left: 60%;
+  }
+  
+  @include phones {
+    left: 40%;
+    top: -75px;
   }
 }
 
@@ -99,6 +116,10 @@
 .reviews__carusel_cell {
   display: flex;
   width: 50%;
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .flickity-viewport {

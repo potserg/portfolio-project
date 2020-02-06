@@ -10,12 +10,23 @@
   @include tablets {
     align-items: center;
   }
+
+  @include phones {
+    height: 60%;
+  }
 }
 
 .order__title {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 80px;
+
+  
+  @include phones {
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
 }
 
 .order__content {
@@ -48,6 +59,10 @@
       justify-content: center;
     }
   }
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .order-form__block {
@@ -75,6 +90,13 @@
     
     .order-form__img {
       fill: $hover-color;
+    }
+  }
+
+  @include phones {
+    margin-right: 0;
+    &:first-child {
+      margin-bottom: 40px;
     }
   }
 }
@@ -117,6 +139,13 @@
 
   &:focus {
     outline: 0;
+  }
+}
+
+.order-form__btn {
+  @include phones {
+    display: flex;
+    justify-content: center;
   }
 }
 

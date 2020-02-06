@@ -12,13 +12,24 @@
   flex-direction: column;
   justify-content: space-evenly;
   position: relative;
+
+  @include phones {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .works__title {
+  display: flex;
   font-size: 36px;
   font-weight: 700;
   line-height: 1.7;
   color: $works-color;
+
+  @include phones {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .works__widget {
@@ -38,6 +49,10 @@
     flex-direction: column;
     justify-content: center;
   }
+
+  @include phones {
+    align-items: center;
+  }
 }
 
 .works__slider_pics {
@@ -55,10 +70,18 @@
     line-height: 1;
     color: rgba($grey-color, 0.3);
     margin-left: -7%;
+
+    @include phones {
+      display: none;
+    }
   }
 
   @include tablets {
     width: 90%;
+  }
+
+  @include phones {
+    width: 100%;
   }
 }
 
@@ -81,6 +104,10 @@
   width: 80%;
   height: 20%;
   overflow: hidden;
+
+  @include phones {
+    display: none;
+  }
 }
 
 .works__slider_thumbs-list {
@@ -139,6 +166,13 @@
   position: absolute;
   bottom: 10%;
   left: 100%;
+
+  @include phones {
+    width: 15%;
+    height: 50%;
+    left: 85%;
+    bottom: 0;
+  }
 }
 
 .works__slider_scroll-btn {
@@ -165,8 +199,8 @@
 }
 
 .works__slider_scroll-icon {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   fill: $links-color;
   
   &--prev {
@@ -187,14 +221,21 @@
     margin-top: 60px;
     margin-left: 0;
   }
+
+  @include phones {
+    width: 95%;
+    align-items: flex-start;
+  }
 }
 
 .works__slider_tags-list {
   display: flex;
+  width: 100%;
   margin-bottom: 60px;
   
   @include tablets {
-  margin-bottom: 30px;
+    justify-content: center;
+    margin-bottom: 30px;
   }
 }
 
@@ -234,6 +275,10 @@
     width: 70%;
     text-align: center;
     margin-bottom: 25px;
+  }
+
+  @include phones {
+    text-align: left;
   }
 }
 
