@@ -8,6 +8,12 @@ export default function sendForm(selector) {
   const action = form.action;
   const method = form.method;
   const activeClass = 'active';
+  const orderPopup = document.querySelector('.order-popup');
+  const closePopup = document.querySelector('.order-form__btn--close');
+
+  const toggleOrder = function() {
+    orderPopup.classList.toggle('active');
+  }
 
   inputs.forEach((input) => {
     input.addEventListener('focus', addFocusToInput);
@@ -79,9 +85,19 @@ export default function sendForm(selector) {
 
   function clearForm() {
     inputs.forEach((input) => {
-      
       input.value = '';
       input.parentElement.classList.remove('full');
     });
+    toggleOrder();
   }
+
+  closePopup.addEventListener('click', () => {
+    toggleOrder();
+  });
+
+  orderPopup.addEventListener('click', (e) => {
+    if (e.target === orderPopup) {
+      toggleOrder();
+    }
+  });
 }

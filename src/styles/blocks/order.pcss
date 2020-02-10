@@ -173,13 +173,6 @@
 }
 
 .order-form__btn {
-  @include phones {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-.order-form__btn_send {
   width: 350px;
   height: 80px;
   border-radius: 50px;
@@ -193,5 +186,10 @@
   &:hover {
     cursor: pointer;
     background: linear-gradient(to left, $start-color, $end-color);
+  }
+
+  @include phones {
+    display: flex;
+    justify-content: center;
   }
 }
