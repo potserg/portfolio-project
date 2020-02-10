@@ -9,10 +9,12 @@ import "./scripts/popup-menu";
 import "./scripts/skills";
 import "./scripts/works";
 import "./scripts/reviews";
-import "./scripts/order";
 import parallax from "./scripts/parallax";
+import sendForm from "./scripts/sendForm";
 
 anchorScroll();
 
 parallax('.parallax-fest', 'up', 10);
 parallax('.parallax-music', 'down', 100);
+
+sendForm('.order-form');

@@ -1,27 +1,38 @@
 section.order#order
   h3.order__title Связаться со мной
   .order__content
-    form.order-form
+    form.order-form(action='https://webdev-api.loftschool.com/sendmail' method='POST')
       .order-form__row
         label.order-form__block
           .order-form__title Введите ваше имя
           .order-form__value
             .order-form__img
               +icon('user', 'order-icon')
-            input.order-form__input(type='text' name='name')
+          input.order-form__input.js-input(type='text' name='name')
+          .order-form__error
         label.order-form__block
           .order-form__title Введите ваш e-mail
           .order-form__value
             .order-form__img
               +icon('envelope', 'order-icon')
-            input.order-form__input(type='email' name='to')
+          input.order-form__input.js-input(type='email' name='email')
+          .order-form__error
+      .order-form__row
+        label.order-form__block
+          .order-form__title Введите ваш телефон
+          .order-form__value
+            .order-form__img
+              +icon('phone', 'order-icon')
+          input.order-form__input.js-input(type='tel' name='phone')
+          .order-form__error
       .order-form__row
         label.order-form__block
           .order-form__title Сообщение к письму
           .order-form__value
             .order-form__img
               +icon('message', 'order-icon')
-            textarea.order-form__input.order-form__input--textarea(name='comment')
+          textarea.order-form__input.js-input.order-form__input--textarea(name='comment')
+          .order-form__error
       .order-form__row
         label.order-form__btn
           input.order-form__btn_send(type='submit' value='Отправить')#send-order
