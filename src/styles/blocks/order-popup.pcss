@@ -3,19 +3,19 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: $font-color;
-  z-index: 5;
+  background-color: rgba($font-color, 0.9);
+  z-index: 200;
   transition: $speed visibility linear, $speed opacity linear;
 
   &.active {
     visibility: visible;
-    opacity: 0.9;
+    opacity: 1;
   }
 }
 
@@ -25,11 +25,6 @@
   justify-content: center;
   background-color: $text-color;
   padding: 60px 100px;
-  margin-bottom: 650px;
-
-  @include tablets {
-    margin-bottom: 900px;
-  }
 }
 
 .order-popup__message_text {

@@ -19,7 +19,6 @@ export default function parallax(selector, direction, speed) {
   
   window.addEventListener('scroll', () => {
     const parallaxCoord = parallax.getBoundingClientRect();
-    console.log(window.innerWidth);
 
     if (parallaxCoord.top <= parallax.clientHeight && parallaxCoord.bottom > 0 && window.innerWidth > widthTablets) {
       const wScroll = window.pageYOffset;

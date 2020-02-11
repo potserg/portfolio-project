@@ -10,9 +10,11 @@ export default function sendForm(selector) {
   const activeClass = 'active';
   const orderPopup = document.querySelector('.order-popup');
   const closePopup = document.querySelector('.order-form__btn--close');
+  const wrapper = document.querySelector('.wrapper');
 
   const toggleOrder = function() {
     orderPopup.classList.toggle('active');
+    wrapper.classList.toggle('hidden');
   }
 
   inputs.forEach((input) => {

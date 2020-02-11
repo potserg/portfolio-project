@@ -1,14 +1,10 @@
 .reviews {
   width: 100%;
-  height: 50%;
+  height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-
-  @include phones {
-    height: 40%;
-  }
 }
 
 .reviews__slider {
@@ -81,12 +77,9 @@
 
   &:disabled {
     cursor: default;
-
-    &:hover {
-      border-color: $links-color;
-      .reviews__carusel_btn-icon {
-        fill: $links-color;
-      }
+    border-color: $grey-color;
+    .reviews__carusel_btn-icon {
+      fill: $grey-color;
     }
   }
 }

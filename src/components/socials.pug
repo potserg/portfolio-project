@@ -3,5 +3,5 @@ mixin socials(mod)
     ul.socials__list
       each social in ['insta', 'vk', 'github']
         li.socials__item
-          a(class=`socials__link socials__link_${social}` href="#")
+          a(class=`socials__link socials__link--${social}` href="#")
             +icon(`${social}`, 'socials__icon')

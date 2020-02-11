@@ -1,5 +1,5 @@
-const header = document.querySelector('.header');
-const footer = document.querySelector('.footer');
+const header = document.querySelector('.header-wrapper');
+const footer = document.querySelector('.footer-wrapper');
 
 window.addEventListener('scroll', () => {
   const footerCoord = footer.getBoundingClientRect();
