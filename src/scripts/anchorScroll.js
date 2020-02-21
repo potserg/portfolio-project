@@ -45,7 +45,6 @@ export default function anchorScroll() {
       scrollY = window.pageYOffset;
       scroolCoord = section.getBoundingClientRect().top - header.clientHeight;
       section.classList.remove('active');
-      console.log(section.getBoundingClientRect().bottom, scroolCoord);
 
       if (section.getBoundingClientRect().bottom > 0 && scroolCoord <= 0) {
         const href = section.id;
