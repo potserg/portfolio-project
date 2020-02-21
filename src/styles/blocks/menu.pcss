@@ -1,15 +1,36 @@
 .menu__list {
+  height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .menu__item {
-  margin-left: 50px;
-  &:first-child {
-    margin-left: 0;
+  height: 100%;
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include phones {
+    width: 50%;
+    margin-right: 0;
+    margin-bottom: 30px;
   }
 }
 
 .menu__link {
   color: $links-color;
+  border: 3px solid transparent;
+  transition: color $speed, padding $speed, border $speed, box-shadow $speed;
+
+  &:hover {
+    color: $hover-color;
+  }
+
+  &.header .active {
+    padding-bottom: 40px;
+    border-bottom: 3px solid $hover-color;
+  }
 }

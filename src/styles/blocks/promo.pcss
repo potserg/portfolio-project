@@ -4,13 +4,25 @@
   align-items: center;
   width: 100%;
   height: 100vh;
-  max-height: 1080px;
-  min-height: 650px;
+  min-height: 500px;
   position: relative;
 }
 
-.promo__content {
+.promo__container {
+  height: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.promo__content {
+  width: 75%;
+  display: flex;
+  position: relative;
+  justify-content: center;
 }
 
 .promo__title {
@@ -20,14 +32,32 @@
   font-size: 72px;
   line-height: 1;
   color: $text-color;
+ 
+  @include tablets {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    font-size: 54px;
+  }
+
+  @include phones {
+    font-size: 36px;
+  }
 }
 
 .promo__subtitle {
   font-size: 18px;
   line-height: 2;
-  color: $subtitle-color;
+  color: $grey-color;
   text-align: right;
   margin-right: 60px;
+ 
+  @include tablets {
+    width: 200px;
+    margin-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
 }
 
 .promo__scroll {
@@ -35,19 +65,35 @@
   bottom: 10%;
   font-size: 18px;
   font-weight: 600;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .promo__scroll_btn {
   display: flex;
   align-items: center;
-
+  
   &--text {
+    color: $links-color;
     margin-right: 15px;
+    transition: color $speed;
   }
-
+  
   &--icon {
-    fill: $text-color;
+    fill: $links-color;
     width: 25px;
     height: 35px;
+    transition: fill $speed;
+  }
+ 
+  &:hover {
+    .promo__scroll_btn--text {
+      color: $hover-color;
+    }
+    .promo__scroll_btn--icon {
+      fill: $hover-color;
+    }
   }
 }

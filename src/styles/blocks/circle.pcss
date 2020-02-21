@@ -1,6 +1,16 @@
 .circle__list {
   display: flex;
   margin-top: 40px;
+
+  @include tablets {
+    margin-top: 20px;
+  }
+
+  @include phones {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .circle__item {
@@ -9,8 +19,24 @@
   justify-content: center;
   position: relative;
   margin-left: 50px;
+  position: relative;
+
   &:first-child {
     margin-left: 0;
+  }
+
+  @include tablets {
+    margin-left: 20px;
+  }
+
+  @include phones {
+    width: 45%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &:nth-child(odd) {
+      margin-left: 0;
+    }
   }
 }
 
@@ -19,49 +45,16 @@
   height: 160px;
   fill: none;
   
-  &--grey {
-    stroke: rgba($grey-color, .3);
+  &--down {
+    stroke: rgba($icons-color, 0.5);
     stroke-width: 10;
   }
 
-  &--blue {
-    stroke: $btn-color;
+  &--up {
     stroke-width: 20;
+    stroke-dasharray: 408.2;
+    stroke-dashoffset: 408.2;
   }
-
-  &--html {
-    stroke-dasharray: 306.15 102.05;
-    stroke-dashoffset: 204.10;
-  }
-  &--css {
-    stroke-dasharray: 204.1;
-    stroke-dashoffset: 204.10;
-  }
-  &--js {
-    stroke-dasharray: 102.05 306.15;
-    stroke-dashoffset: 204.10;
-  }
-  &--jq {
-    stroke-dasharray: 51.025 357.175;
-    stroke-dashoffset: 204.10;
-  }
-  &--git {
-    stroke-dasharray: 204.1;
-    stroke-dashoffset: 204.10;
-  }
-  &--term {
-    stroke-dasharray: 204.1;
-    stroke-dashoffset: 204.10;
-  }
-  &--gulp {
-    stroke-dasharray: 102.05 306.15;
-    stroke-dashoffset: 204.10;
-  }
-  &--wp {
-    stroke-dasharray: 51.025 357.175;
-    stroke-dashoffset: 204.10;
-  }
-  
 }
 
 .circle__title {

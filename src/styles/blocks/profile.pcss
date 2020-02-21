@@ -1,6 +1,14 @@
 .profile {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 100px;
+  padding-top: 150px;
+ 
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
 }
 
 .profile__main {
@@ -8,6 +16,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @include phones {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 }
 
 .profile__foto {
@@ -24,9 +38,19 @@
   object-fit: cover;
 }
 
+.profile__text {
+  @include phones {
+    width: 100%;
+  }
+}
+
 .profile__data {
   font-size: 16px;
   font-weight: 600;
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .profile__data_cell {
@@ -47,10 +71,18 @@
   font-weight: 600;
   line-height: 1.7;
   color: $grey-color;
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .profile__desc_welcome-text {
   margin-bottom: 30px;
+
+  @include phones {
+    margin-bottom: 15px;
+  }
 }
 
 .profile__desc_username {
@@ -59,9 +91,18 @@
   line-height: 1.7;
   color: $text-color;
   margin-bottom: 40px;
+
+  @include phones {
+    width: 70%;
+    margin-bottom: 30px;
+  }
 }
 .profile__desc_text {
   margin-bottom: 100px;
+
+  @include phones {
+    margin-bottom: 30px;
+  }
 }
 
 .profile__desc_subtext {

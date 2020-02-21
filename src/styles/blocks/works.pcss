@@ -7,118 +7,262 @@
 }
 
 .works__container {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  justify-content: space-evenly;
   position: relative;
+
+  @include phones {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .works__title {
   display: flex;
-  align-items: center;
-  height: 280px;
   font-size: 36px;
   font-weight: 700;
+  line-height: 1.7;
   color: $works-color;
+
+  @include phones {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
-.works__content {
+.works__widget {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   position: relative;
 }
 
-.works__img {
-  width: 65%;
+.works__slider {
+  width: 100%;
+  display: flex;
+  position: relative;
+  
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include phones {
+    align-items: center;
+  }
+}
+
+.works__slider_pics {
+  width: 70%;
+  position: relative;
+
+  &::before {
+    content: attr(data-slide);
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-60%);
+    font-size: 300px;
+    font-weight: 800;
+    line-height: 1;
+    color: rgba($grey-color, 0.3);
+    margin-left: -7%;
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  @include tablets {
+    width: 90%;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.works__slider_img {
   height: 100%;
   position: relative;
   z-index: 5;
 }
 
-.works__img_main {
+.works__slider_img-main {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.works__list {
-  display: flex;
+.works__slider_thumbs {
   position: absolute;
-  right: -50px;
+  right: 0;
   bottom: 10%;
-}
+  width: 80%;
+  height: 20%;
+  overflow: hidden;
 
-.works__btn {
-  &:hover {
-    cursor: pointer;
-    border: 3px solid $worksborder-color;
+  @include phones {
+    display: none;
   }
 }
 
-.works__scroll {
+.works__slider_thumbs-list {
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.works__slider_thumbs-item {
+  min-width: 33.33%;
+  height: 100%;
+  position: relative;
+  
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $hover-color;
+    opacity: 0;
+    z-index: -1;
+    cursor: pointer;
+    transition: opacity $speed, z-index $speed;
+  }
+
+  &:hover {
+
+    &::after {
+      z-index: 1;
+      opacity: 0.5;
+    }
+  }
+
+  &.active {
+    border: 3px solid $hover-color;
+  }
+}
+
+.works__slider_thumbs-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.works__slider_scroll {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   width: 50px;
-  height: 100px;
+  height: 20%;
   background-color: $worksscroll-color;
+  position: absolute;
+  bottom: 10%;
+  left: 100%;
+
+  @include phones {
+    width: 15%;
+    height: 50%;
+    left: 85%;
+    bottom: 0;
+  }
 }
 
-.works__scroll_icon {
-  width: 10px;
-  height: 10px;
-  fill: $grey-color;
+.works__slider_scroll-btn {
+  width: 100%;
+  height: 50%;
+  transition: background-color $speed, opacity $speed, fill $speed;
+
+  &:disabled {
+    cursor: default;
+    
+    &:hover {
+      background-color: $worksscroll-color;
+    }
+
+    .works__slider_scroll-icon{
+      fill: $icons-color;
+    }
+  }
+
+  &:hover {
+    background-color: $hover-color;
+    opacity: 0.5;
+  }
+}
+
+.works__slider_scroll-icon {
+  width: 15px;
+  height: 15px;
+  fill: $links-color;
+  
   &--prev {
     transform: rotate(180deg);
   }
-  &:hover {
-    fill: $text-color;
+}
+
+.works__slider_info {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 10%;
+  
+  @include tablets {
+    width: 100%;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 0;
+  }
+
+  @include phones {
+    width: 95%;
+    align-items: flex-start;
   }
 }
 
-.works__desc {
+.works__slider_tags-list {
   display: flex;
-  width: 35%;
-  height: 70%;
-  position: relative;
-
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 60px;
+  
+  @include tablets {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 }
 
-.works__number {
-  width: 15%;
-  height: 70%;
-  font-size: 400px;
-  font-weight: 800;
-  color: rgba($grey-color, .3);
-  left: -50px;
-}
-
-.works__desc {
-  width: 20%;
-  height: 70%;
-  display: flex;
-  flex-direction: column;
-}
-
-.works__tags_list {
-  display: flex;
-  margin-bottom: 50px;
-}
-
-.works__tags_item {
+.works__slider_tags-item {
   font-size: 15px;
   font-weight: 600;
   color: $grey-color;
-  border-radius: 30px;
-  background-color: rgba($grey-color, .3);
-  padding: 15px 20px;
-  margin-left: 20px;
-  &:first-child {
-    margin-left: 0;
+  border-radius: 20px;
+  background-color: rgba($grey-color, 0.3);
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+
+  @include tablets {
+    margin-right: 20px;
+    
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
-.works__title {
+.works__slider_title {
+  display: flex;
+  align-items: center;
   font-size: 30px;
   font-weight: 700;
   line-height: 1.7;
@@ -126,28 +270,46 @@
   margin-bottom: 40px;
 }
 
-.works__subtitle {
+.works__slider_subtitle {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.7;
   color: $grey-color;
   margin-bottom: 50px;
+  
+  @include tablets {
+    width: 70%;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  @include phones {
+    text-align: left;
+  }
 }
 
-.works__link {
+.works__slider_link {
   display: flex;
   align-items: center;
-  color: $workslink-color;
+  color: $href-color;
+
+  &:hover {
+    .works__slider_link-text {
+      border-bottom: 1px solid $href-color;
+    }
+  }
 }
 
-.works__link_img {
-  fill: $workslink-color;
+.works__slider_link-img {
+  fill: $href-color;
   width: 20px;
   height: 20px;
   margin-right: 20px;
 }
 
-.works__link_text {
+.works__slider_link-text {
   font-size: 18px;
   font-weight: 700;
+  border-bottom: 1px solid transparent;
+  transition: border $speed;
 }
